@@ -1,0 +1,1782 @@
+{
+  "started_at_unix": 1784469062.579667,
+  "duration_seconds": 319.058,
+  "counts": {
+    "pass": 74,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "group": "dg-am-grid",
+      "name": "100hz-20pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 100.0,
+        "depth_percent": 20.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 100.0,
+        "depth_percent": 20.0,
+        "envelope_contrast": 0.1842424235281506,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "100hz-50pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 100.0,
+        "depth_percent": 50.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 100.0,
+        "depth_percent": 50.0,
+        "envelope_contrast": 0.4616086847047953,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "100hz-80pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 100.0,
+        "depth_percent": 80.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 100.0,
+        "depth_percent": 80.0,
+        "envelope_contrast": 0.7428112422538478,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "500hz-20pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 500.0,
+        "depth_percent": 20.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 500.0,
+        "depth_percent": 20.0,
+        "envelope_contrast": 0.16512871619197775,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "500hz-50pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 500.0,
+        "depth_percent": 50.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 500.0,
+        "depth_percent": 50.0,
+        "envelope_contrast": 0.41344043496523414,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "500hz-80pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 500.0,
+        "depth_percent": 80.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 500.0,
+        "depth_percent": 80.0,
+        "envelope_contrast": 0.6607289315361649,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "1000hz-20pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 1000.0,
+        "depth_percent": 20.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 1000.0,
+        "depth_percent": 20.0,
+        "envelope_contrast": 0.11639806461189932,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "1000hz-50pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 1000.0,
+        "depth_percent": 50.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 1000.0,
+        "depth_percent": 50.0,
+        "envelope_contrast": 0.27947814652772357,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-am-grid",
+      "name": "1000hz-80pct",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 20000,
+        "modulation_hz": 1000.0,
+        "depth_percent": 80.0
+      },
+      "observed": {
+        "state": "ON",
+        "source": "INT",
+        "internal_frequency_hz": 1000.0,
+        "depth_percent": 80.0,
+        "envelope_contrast": 0.4274082472836287,
+        "sample_count": 8192
+      },
+      "checks": {
+        "state": true,
+        "source": true,
+        "frequency": true,
+        "depth": true,
+        "physical_envelope": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "100hz-500",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 500.0,
+        "instantaneous_frequency_p05_hz": 9090.90909090909,
+        "instantaneous_frequency_p95_hz": 11111.111111111111,
+        "frequency_span_hz": 2020.2020202020212,
+        "sideband_carrier_ratio": 1.8894697270763925
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "100hz-2000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 2000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 2000.0,
+        "instantaneous_frequency_p05_hz": 8333.333333333332,
+        "instantaneous_frequency_p95_hz": 12499.999999999998,
+        "frequency_span_hz": 4166.666666666666,
+        "sideband_carrier_ratio": 0.407250842145992
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "100hz-4000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 4000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 4000.0,
+        "instantaneous_frequency_p05_hz": 6249.999999999999,
+        "instantaneous_frequency_p95_hz": 14285.714285714284,
+        "frequency_span_hz": 8035.714285714285,
+        "sideband_carrier_ratio": 11.207046022966933
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "500hz-500",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 500.0,
+        "instantaneous_frequency_p05_hz": 9433.962264150943,
+        "instantaneous_frequency_p95_hz": 10416.666666666666,
+        "frequency_span_hz": 982.7044025157229,
+        "sideband_carrier_ratio": 0.563830809457705
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "500hz-2000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 2000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 2000.0,
+        "instantaneous_frequency_p05_hz": 8064.516129032258,
+        "instantaneous_frequency_p95_hz": 11904.761904761905,
+        "frequency_span_hz": 3840.245775729647,
+        "sideband_carrier_ratio": 0.1576406533329044
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "500hz-4000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 4000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 4000.0,
+        "instantaneous_frequency_p05_hz": 6493.506493506494,
+        "instantaneous_frequency_p95_hz": 13888.888888888889,
+        "frequency_span_hz": 7395.382395382395,
+        "sideband_carrier_ratio": 1.3532434997221903
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "1000hz-500",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 500.0,
+        "instantaneous_frequency_p05_hz": 9523.809523809525,
+        "instantaneous_frequency_p95_hz": 10526.315789473685,
+        "frequency_span_hz": 1002.5062656641603,
+        "sideband_carrier_ratio": 0.254263824209704
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "1000hz-2000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 2000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 2000.0,
+        "instantaneous_frequency_p05_hz": 8064.516129032258,
+        "instantaneous_frequency_p95_hz": 11904.761904761905,
+        "frequency_span_hz": 3840.245775729647,
+        "sideband_carrier_ratio": 2.658507807679611
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fm-grid",
+      "name": "1000hz-4000",
+      "status": "pass",
+      "expected": {
+        "mode": "FM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 4000.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 4000.0,
+        "instantaneous_frequency_p05_hz": 6172.839506172841,
+        "instantaneous_frequency_p95_hz": 14084.507042253523,
+        "frequency_span_hz": 7911.667536080682,
+        "sideband_carrier_ratio": 0.18960685162145224
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "100hz-30",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 30.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 30.0,
+        "instantaneous_frequency_p05_hz": 10000.0,
+        "instantaneous_frequency_p95_hz": 10000.0,
+        "frequency_span_hz": 0.0,
+        "sideband_carrier_ratio": 0.27179334615652917
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "100hz-90",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 90.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 90.0,
+        "instantaneous_frequency_p05_hz": 9090.90909090909,
+        "instantaneous_frequency_p95_hz": 10000.0,
+        "frequency_span_hz": 909.0909090909099,
+        "sideband_carrier_ratio": 1.1754658370543587
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "100hz-180",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 100.0,
+        "deviation": 180.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 100.0,
+        "deviation": 180.0,
+        "instantaneous_frequency_p05_hz": 9090.90909090909,
+        "instantaneous_frequency_p95_hz": 11111.111111111111,
+        "frequency_span_hz": 2020.2020202020212,
+        "sideband_carrier_ratio": 0.996148599145375
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "500hz-30",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 30.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 30.0,
+        "instantaneous_frequency_p05_hz": 9615.384615384615,
+        "instantaneous_frequency_p95_hz": 10204.081632653062,
+        "frequency_span_hz": 588.6970172684469,
+        "sideband_carrier_ratio": 0.27337399944889085
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "500hz-90",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 90.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 90.0,
+        "instantaneous_frequency_p05_hz": 9259.25925925926,
+        "instantaneous_frequency_p95_hz": 10869.565217391304,
+        "frequency_span_hz": 1610.305958132045,
+        "sideband_carrier_ratio": 1.2458580725195028
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "500hz-180",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 500.0,
+        "deviation": 180.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 500.0,
+        "deviation": 180.0,
+        "instantaneous_frequency_p05_hz": 8474.57627118644,
+        "instantaneous_frequency_p95_hz": 11627.906976744187,
+        "frequency_span_hz": 3153.330705557746,
+        "sideband_carrier_ratio": 0.986473427691953
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "1000hz-30",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 30.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 30.0,
+        "instantaneous_frequency_p05_hz": 9433.962264150943,
+        "instantaneous_frequency_p95_hz": 10526.315789473685,
+        "frequency_span_hz": 1092.353525322742,
+        "sideband_carrier_ratio": 0.2682072115612598
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "1000hz-90",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 90.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 90.0,
+        "instantaneous_frequency_p05_hz": 8474.57627118644,
+        "instantaneous_frequency_p95_hz": 11494.252873563219,
+        "frequency_span_hz": 3019.6766023767777,
+        "sideband_carrier_ratio": 1.167880165750251
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-pm-grid",
+      "name": "1000hz-180",
+      "status": "pass",
+      "expected": {
+        "mode": "PM",
+        "carrier_hz": 10000,
+        "modulation_hz": 1000.0,
+        "deviation": 180.0
+      },
+      "observed": {
+        "state": "ON",
+        "internal_frequency_hz": 1000.0,
+        "deviation": 180.0,
+        "instantaneous_frequency_p05_hz": 6993.006993006993,
+        "instantaneous_frequency_p95_hz": 13157.894736842107,
+        "frequency_span_hz": 6164.887743835114,
+        "sideband_carrier_ratio": 0.8940908444967529
+      },
+      "checks": {
+        "state": true,
+        "modulation_frequency": true,
+        "deviation": true,
+        "physical_frequency_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "100hz-5000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 5000.0,
+        "rate_hz": 100.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 5000.0,
+        "rate_hz": 100.0,
+        "frequency_p10_hz": 5000.0,
+        "frequency_p90_hz": 10000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "100hz-15000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 15000.0,
+        "rate_hz": 100.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 15000.0,
+        "rate_hz": 100.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 16666.666666666664
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "100hz-20000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 20000.0,
+        "rate_hz": 100.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 20000.0,
+        "rate_hz": 100.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 20000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "500hz-5000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 5000.0,
+        "rate_hz": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 5000.0,
+        "rate_hz": 500.0,
+        "frequency_p10_hz": 5000.0,
+        "frequency_p90_hz": 10000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "500hz-15000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 15000.0,
+        "rate_hz": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 15000.0,
+        "rate_hz": 500.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 15151.515151515154
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "500hz-20000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 20000.0,
+        "rate_hz": 500.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 20000.0,
+        "rate_hz": 500.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 20000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "1000hz-5000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 5000.0,
+        "rate_hz": 1000.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 5000.0,
+        "rate_hz": 1000.0,
+        "frequency_p10_hz": 5000.0,
+        "frequency_p90_hz": 10000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "1000hz-15000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 15000.0,
+        "rate_hz": 1000.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 15000.0,
+        "rate_hz": 1000.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 15151.515151515154
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-fsk-grid",
+      "name": "1000hz-20000hz",
+      "status": "pass",
+      "expected": {
+        "carrier_hz": 10000,
+        "hop_hz": 20000.0,
+        "rate_hz": 1000.0
+      },
+      "observed": {
+        "state": "ON",
+        "hop_hz": 20000.0,
+        "rate_hz": 1000.0,
+        "frequency_p10_hz": 10000.0,
+        "frequency_p90_hz": 20000.0
+      },
+      "checks": {
+        "state": true,
+        "hop": true,
+        "rate": true,
+        "physical_low": true,
+        "physical_high": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "lin-200-2000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LIN",
+        "start_hz": 200.0,
+        "stop_hz": 2000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LINEAR",
+        "start_hz": 200.0,
+        "stop_hz": 2000.0,
+        "frequency_p02_hz": 378.78787878787875,
+        "frequency_p98_hz": 1923.0769230769229
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "lin-1000-10000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LIN",
+        "start_hz": 1000.0,
+        "stop_hz": 10000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LINEAR",
+        "start_hz": 1000.0,
+        "stop_hz": 10000.0,
+        "frequency_p02_hz": 1785.7142857142856,
+        "frequency_p98_hz": 12499.999999999998
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "lin-5000-20000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LIN",
+        "start_hz": 5000.0,
+        "stop_hz": 20000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LINEAR",
+        "start_hz": 5000.0,
+        "stop_hz": 20000.0,
+        "frequency_p02_hz": 5000.0,
+        "frequency_p98_hz": 12499.999999999998
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "log-200-2000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LOG",
+        "start_hz": 200.0,
+        "stop_hz": 2000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LOG",
+        "start_hz": 200.0,
+        "stop_hz": 2000.0,
+        "frequency_p02_hz": 247.5247524752475,
+        "frequency_p98_hz": 1923.0769230769229
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "log-1000-10000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LOG",
+        "start_hz": 1000.0,
+        "stop_hz": 10000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LOG",
+        "start_hz": 1000.0,
+        "stop_hz": 10000.0,
+        "frequency_p02_hz": 1190.4761904761904,
+        "frequency_p98_hz": 12499.999999999998
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-sweep-grid",
+      "name": "log-5000-20000",
+      "status": "pass",
+      "expected": {
+        "spacing": "LOG",
+        "start_hz": 5000.0,
+        "stop_hz": 20000.0,
+        "time_s": 0.1
+      },
+      "observed": {
+        "state": "ON",
+        "spacing": "LOG",
+        "start_hz": 5000.0,
+        "stop_hz": 20000.0,
+        "frequency_p02_hz": 5000.0,
+        "frequency_p98_hz": 12499.999999999998
+      },
+      "checks": {
+        "state": true,
+        "spacing": true,
+        "start": true,
+        "stop": true,
+        "physical_variation": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "1cycles-0.01s",
+      "status": "pass",
+      "expected": {
+        "cycles": 1,
+        "period_s": 0.01,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 1.0,
+        "period_s": 0.01,
+        "active_groups": 9,
+        "frequency_median_hz": 100.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "1cycles-0.02s",
+      "status": "pass",
+      "expected": {
+        "cycles": 1,
+        "period_s": 0.02,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 1.0,
+        "period_s": 0.02,
+        "active_groups": 9,
+        "frequency_median_hz": 12499.999999999998
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "3cycles-0.01s",
+      "status": "pass",
+      "expected": {
+        "cycles": 3,
+        "period_s": 0.01,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 3.0,
+        "period_s": 0.01,
+        "active_groups": 9,
+        "frequency_median_hz": 2000.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "3cycles-0.02s",
+      "status": "pass",
+      "expected": {
+        "cycles": 3,
+        "period_s": 0.02,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 3.0,
+        "period_s": 0.02,
+        "active_groups": 9,
+        "frequency_median_hz": 2000.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "5cycles-0.01s",
+      "status": "pass",
+      "expected": {
+        "cycles": 5,
+        "period_s": 0.01,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 5.0,
+        "period_s": 0.01,
+        "active_groups": 9,
+        "frequency_median_hz": 2000.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "5cycles-0.02s",
+      "status": "pass",
+      "expected": {
+        "cycles": 5,
+        "period_s": 0.02,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 5.0,
+        "period_s": 0.02,
+        "active_groups": 9,
+        "frequency_median_hz": 2000.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "10cycles-0.01s",
+      "status": "pass",
+      "expected": {
+        "cycles": 10,
+        "period_s": 0.01,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 10.0,
+        "period_s": 0.01,
+        "active_groups": 9,
+        "frequency_median_hz": 24999.999999999996
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-burst-grid",
+      "name": "10cycles-0.02s",
+      "status": "pass",
+      "expected": {
+        "cycles": 10,
+        "period_s": 0.02,
+        "carrier_hz": 2000
+      },
+      "observed": {
+        "state": "ON",
+        "cycles": 10.0,
+        "period_s": 0.02,
+        "active_groups": 9,
+        "frequency_median_hz": 2000.0
+      },
+      "checks": {
+        "state": true,
+        "cycles": true,
+        "period": true,
+        "physical_gaps": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "+0deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": 0.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": 0.0,
+        "measured_phase_degrees": -12.513524638016378,
+        "absolute_error_degrees": 12.513524638016378,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "+45deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": 45.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": 45.0,
+        "measured_phase_degrees": 46.502351484999224,
+        "absolute_error_degrees": 1.5023514849992239,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "+90deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": 90.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": 90.0,
+        "measured_phase_degrees": 91.64212410731585,
+        "absolute_error_degrees": 1.6421241073158512,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "+135deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": 135.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": 135.0,
+        "measured_phase_degrees": 136.38766048133192,
+        "absolute_error_degrees": 1.3876604813319204,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "+180deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": 180.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": 180.0,
+        "measured_phase_degrees": 179.90476834531694,
+        "absolute_error_degrees": 0.0952316546830616,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-phase-grid",
+      "name": "-90deg",
+      "status": "pass",
+      "expected": {
+        "channel2_phase_degrees": -90.0,
+        "frequency_hz": 1000
+      },
+      "observed": {
+        "dg_phase_ch2": -90.0,
+        "measured_phase_degrees": -88.24668954752171,
+        "absolute_error_degrees": 1.7533104524782885,
+        "points_ch1": 8192,
+        "points_ch2": 8192
+      },
+      "checks": {
+        "register": true,
+        "physical_phase": true,
+        "synchronized_depth": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-normal",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "polarity": "NORMal"
+      },
+      "observed": {
+        "polarity": "NORM"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-inverted",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "polarity": "INVerted"
+      },
+      "observed": {
+        "polarity": "INV"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-load-50",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "load": "50"
+      },
+      "observed": {
+        "load_ohms": "50"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-load-100",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "load": "100"
+      },
+      "observed": {
+        "load_ohms": "100"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-load-1000",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "load": "1000"
+      },
+      "observed": {
+        "load_ohms": "1000"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch1-load-infinity",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "load": "INFinity"
+      },
+      "observed": {
+        "load_ohms": "Infinity"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-normal",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "polarity": "NORMal"
+      },
+      "observed": {
+        "polarity": "NORM"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-inverted",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "polarity": "INVerted"
+      },
+      "observed": {
+        "polarity": "INV"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-load-50",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "load": "50"
+      },
+      "observed": {
+        "load_ohms": "50"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-load-100",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "load": "100"
+      },
+      "observed": {
+        "load_ohms": "100"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-load-1000",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "load": "1000"
+      },
+      "observed": {
+        "load_ohms": "1000"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-output-controls",
+      "name": "ch2-load-infinity",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "load": "INFinity"
+      },
+      "observed": {
+        "load_ohms": "Infinity"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-coupling",
+      "name": "registers",
+      "status": "pass",
+      "expected": {
+        "base": "CH1",
+        "frequency_deviation": 1234,
+        "phase_deviation": 45
+      },
+      "observed": {
+        "base": "CH1",
+        "frequency_deviation": 1234.0,
+        "phase_deviation": 45.0,
+        "enabled": "ON"
+      },
+      "checks": {
+        "base": true,
+        "frequency": true,
+        "phase": true,
+        "enabled": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-channel-copy",
+      "name": "ch1-to-ch2",
+      "status": "pass",
+      "expected": {
+        "function": "RAMP",
+        "frequency": 1234,
+        "amplitude": 1.5,
+        "offset": 0.2
+      },
+      "observed": {
+        "function": "CH2:RAMP",
+        "frequency": 1234.0,
+        "amplitude": 1.5,
+        "offset": 0.2,
+        "phase": 30.0
+      },
+      "checks": {
+        "function": true,
+        "frequency": true,
+        "amplitude": true,
+        "offset": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-arb-lifecycle",
+      "name": "QA0_4",
+      "status": "pass",
+      "expected": {
+        "input_points": 4,
+        "dac": false,
+        "name": "QA0_4"
+      },
+      "observed": {
+        "bin_bytes": 8192,
+        "csv_bytes": 67097,
+        "json_bytes": 25944,
+        "device_points": 4096,
+        "catalog_contained_name": true
+      },
+      "checks": {
+        "catalog": true,
+        "expanded_points": true,
+        "bin": true,
+        "csv": true,
+        "json": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-arb-lifecycle",
+      "name": "QA1_17",
+      "status": "pass",
+      "expected": {
+        "input_points": 17,
+        "dac": true,
+        "name": "QA1_17"
+      },
+      "observed": {
+        "bin_bytes": 8192,
+        "csv_bytes": 66602,
+        "json_bytes": 25691,
+        "device_points": 4096,
+        "catalog_contained_name": true
+      },
+      "checks": {
+        "catalog": true,
+        "expanded_points": true,
+        "bin": true,
+        "csv": true,
+        "json": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-arb-lifecycle",
+      "name": "QA2_257",
+      "status": "pass",
+      "expected": {
+        "input_points": 257,
+        "dac": false,
+        "name": "QA2_257"
+      },
+      "observed": {
+        "bin_bytes": 8192,
+        "csv_bytes": 66796,
+        "json_bytes": 25669,
+        "device_points": 4096,
+        "catalog_contained_name": true
+      },
+      "checks": {
+        "catalog": true,
+        "expanded_points": true,
+        "bin": true,
+        "csv": true,
+        "json": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-arb-lifecycle",
+      "name": "QA3_4096",
+      "status": "pass",
+      "expected": {
+        "input_points": 4096,
+        "dac": true,
+        "name": "QA3_4096"
+      },
+      "observed": {
+        "bin_bytes": 8192,
+        "csv_bytes": 76737,
+        "json_bytes": 28721,
+        "device_points": 4096,
+        "catalog_contained_name": true
+      },
+      "checks": {
+        "catalog": true,
+        "expanded_points": true,
+        "bin": true,
+        "csv": true,
+        "json": true
+      },
+      "error": null
+    }
+  ]
+}

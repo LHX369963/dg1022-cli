@@ -1,0 +1,1039 @@
+{
+  "started_at_unix": 1784468509.3045478,
+  "duration_seconds": 89.704,
+  "counts": {
+    "pass": 33,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-0",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-0",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-1",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-1",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-2",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-2",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-3",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-3",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-4",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-4",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-5",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-5",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-6",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-6",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-7",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-7",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-8",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-8",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "dg-config-9",
+      "status": "pass",
+      "expected": {
+        "model": "DG1022"
+      },
+      "observed": {
+        "identity": "RIGOL TECHNOLOGIES,DG1022 ,DG1D124605159,,00.02.00.06.00.02.07",
+        "channel1_function": "CH1:SIN",
+        "channel1_frequency_hz": 1000.0,
+        "channel1_amplitude": 2.0,
+        "channel1_amplitude_unit": "VPP",
+        "channel1_offset_v": 0.0,
+        "channel1_phase_deg": 0.0,
+        "channel1_output": "ON",
+        "channel1_load_ohm": "infinity",
+        "channel2_function": "CH2:SIN",
+        "channel2_frequency_hz": 2000.0,
+        "channel2_amplitude": 2.0,
+        "channel2_amplitude_unit": "VPP",
+        "channel2_offset_v": 0.0,
+        "channel2_phase_deg": 0.0,
+        "channel2_output": "ON",
+        "channel2_load_ohm": "infinity",
+        "am": "OFF",
+        "fm": "OFF",
+        "pm": "OFF",
+        "fsk": "OFF",
+        "sweep": "OFF",
+        "burst": "OFF",
+        "coupling": "OFF"
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-repeated-sessions",
+      "name": "ds-config-9",
+      "status": "pass",
+      "expected": {
+        "model": "DS1152E"
+      },
+      "observed": {
+        "identity": "Rigol Technologies,DS1152E,DS1ET192605874,00.04.01.00.02",
+        "acquire_type": "NORMAL",
+        "acquire_mode": "EQUAL_TIME",
+        "averages": 256.0,
+        "memory_depth_mode": "NORMAL",
+        "timebase_mode": "MAIN",
+        "timebase_scale_seconds": 0.0002,
+        "timebase_offset_seconds": 0.0,
+        "trigger_mode": "EDGE",
+        "trigger_status": "AUTO",
+        "waveform_points_mode": "MAXIMUM",
+        "channel1_display": 1.0,
+        "channel1_coupling": "DC",
+        "channel1_invert": "OFF",
+        "channel1_bandwidth_limit": "OFF",
+        "channel1_probe": 1.0,
+        "channel1_scale_volts": 0.5,
+        "channel1_offset_volts": 0.0,
+        "channel2_display": 1.0,
+        "channel2_coupling": "DC",
+        "channel2_invert": "OFF",
+        "channel2_bandwidth_limit": "OFF",
+        "channel2_probe": 1.0,
+        "channel2_scale_volts": 0.5,
+        "channel2_offset_volts": 0.0,
+        "channel1_sample_rate_hz": 1000000.0,
+        "channel1_memory_depth_points": 8192.0,
+        "channel2_sample_rate_hz": 1000000.0,
+        "channel2_memory_depth_points": 8192.0
+      },
+      "checks": {
+        "identity": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-numeric-formats",
+      "name": "2e-06",
+      "status": "pass",
+      "expected": {
+        "seconds_per_div": 2e-06
+      },
+      "observed": {
+        "readback": 2e-06
+      },
+      "checks": {
+        "exact_step": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-numeric-formats",
+      "name": "5e-05",
+      "status": "pass",
+      "expected": {
+        "seconds_per_div": 5e-05
+      },
+      "observed": {
+        "readback": 5e-05
+      },
+      "checks": {
+        "exact_step": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-numeric-formats",
+      "name": "0.0002",
+      "status": "pass",
+      "expected": {
+        "seconds_per_div": 0.0002
+      },
+      "observed": {
+        "readback": 0.0002
+      },
+      "checks": {
+        "exact_step": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-numeric-formats",
+      "name": "1e-03",
+      "status": "pass",
+      "expected": {
+        "seconds_per_div": 0.001
+      },
+      "observed": {
+        "readback": 0.001
+      },
+      "checks": {
+        "exact_step": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "dg-invalid-channel",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 2,
+        "stderr": "usage: dg1022 set [-h] [--channel {1,2}] name [values ...]\ndg1022 set: error: argument --channel: invalid choice: '3' (choose from 1, 2)"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "dg-invalid-command",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: unknown manual command 'not.a.command'; use 'dg1022 commands list'"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "dg-invalid-mod-option",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: am does not support --deviation"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "ds-invalid-channel",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: channel must be 1 or 2"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "ds-digital-only",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: logic.display is DS1000D-only and is not available on a DS1152E"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "ds-reset-confirmation",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: general.reset changes many settings; repeat with --yes"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-invalid-inputs",
+      "name": "ds-unsupported-mode",
+      "status": "pass",
+      "expected": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "observed": {
+        "exit_code": 1,
+        "stderr": "error: trigger.level supports --mode EDGE, PULSE, VIDEO; got SLOPE"
+      },
+      "checks": {
+        "nonzero_exit": true,
+        "diagnostic": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-batch",
+      "name": "dg-write-query",
+      "status": "pass",
+      "expected": {
+        "frequency": 1234,
+        "amplitude": 1.5
+      },
+      "observed": {
+        "stdout": "1.234000e+03\n1.500000e+00"
+      },
+      "checks": {
+        "responses": true
+      },
+      "error": null
+    },
+    {
+      "group": "cli-batch",
+      "name": "ds-write-query",
+      "status": "pass",
+      "expected": {
+        "scale": 0.5,
+        "timebase": 0.0002
+      },
+      "observed": {
+        "stdout": "5.000e-01\n2.000e-04"
+      },
+      "checks": {
+        "responses": true
+      },
+      "error": null
+    }
+  ]
+}

@@ -47,8 +47,35 @@ def test_output_helper_uses_positional_apply(monkeypatch, capsys):
         "APPLy:SINusoid:CH2 10kHz,2Vpp,0V",
         "PHASe:CH2 30",
         "PHASe:ALIGN",
+        "PHASe:CH2 30",
+        "PHASe:ALIGN",
         "OUTPut:CH2 ON",
     ]
+    capsys.readouterr()
+
+
+def test_dc_output_repeats_apply_to_commit_the_physical_level(monkeypatch, capsys):
+    generator = FakeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "1", "--waveform", "dc", "--frequency", "1kHz",
+        "--amplitude", "1Vpp", "--offset", "-0.5V", "--enable",
+    ]) == 0
+    assert generator.writes == [
+        "APPLy:DC 1kHz,1Vpp,-0.5V",
+        "APPLy:DC 1kHz,1Vpp,-0.5V",
+        "OUTPut OFF",
+        "OUTPut ON",
+    ]
+    capsys.readouterr()
+
+
+def test_catalog_set_accepts_negative_values_with_unit_suffixes(monkeypatch, capsys):
+    generator = FakeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    assert cli.main(["set", "voltage.offset", "-500mV", "--channel", "2"]) == 0
+    assert generator.writes == ["VOLTage:OFFSet:CH2 -500mV"]
     capsys.readouterr()
 
 
@@ -61,6 +88,10 @@ def test_modulation_helper_orders_enable_configuration_and_final_state(monkeypat
     ]) == 0
     assert generator.writes == [
         "FM:STATe ON",
+        "FM:SOURce INT",
+        "FM:INTernal:FUNCtion SIN",
+        "FM:INTernal:FREQuency 1kHz",
+        "FM:DEViation 2kHz",
         "FM:SOURce INT",
         "FM:INTernal:FUNCtion SIN",
         "FM:INTernal:FREQuency 1kHz",

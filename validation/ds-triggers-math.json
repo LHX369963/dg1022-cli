@@ -1,0 +1,2244 @@
+{
+  "started_at_unix": 1784467497.7930355,
+  "duration_seconds": 115.9,
+  "counts": {
+    "pass": 102,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-pos--0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "POSitive",
+        "level_v": -0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "POSITIVE",
+        "level_v": -0.5,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-pos-+0v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "POSitive",
+        "level_v": 0.0
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "POSITIVE",
+        "level_v": 0.0,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-pos-+0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "POSitive",
+        "level_v": 0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "POSITIVE",
+        "level_v": 0.5,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-neg--0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "NEGative",
+        "level_v": -0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "NEGATIVE",
+        "level_v": -0.5,
+        "status": "RUN",
+        "measured_vpp": 2.06
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-neg-+0v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "NEGative",
+        "level_v": 0.0
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "NEGATIVE",
+        "level_v": 0.0,
+        "status": "RUN",
+        "measured_vpp": 2.06
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch1-neg-+0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "slope": "NEGative",
+        "level_v": 0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH1",
+        "slope": "NEGATIVE",
+        "level_v": 0.5,
+        "status": "RUN",
+        "measured_vpp": 2.06
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-pos--0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "POSitive",
+        "level_v": -0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "POSITIVE",
+        "level_v": -0.5,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-pos-+0v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "POSitive",
+        "level_v": 0.0
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "POSITIVE",
+        "level_v": 0.0,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-pos-+0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "POSitive",
+        "level_v": 0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "POSITIVE",
+        "level_v": 0.5,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-neg--0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "NEGative",
+        "level_v": -0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "NEGATIVE",
+        "level_v": -0.5,
+        "status": "RUN",
+        "measured_vpp": 2.04
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-neg-+0v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "NEGative",
+        "level_v": 0.0
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "NEGATIVE",
+        "level_v": 0.0,
+        "status": "RUN",
+        "measured_vpp": 2.06
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-edge-grid",
+      "name": "ch2-neg-+0.5v",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "slope": "NEGative",
+        "level_v": 0.5
+      },
+      "observed": {
+        "mode": "EDGE",
+        "source": "CH2",
+        "slope": "NEGATIVE",
+        "level_v": 0.5,
+        "status": "RUN",
+        "measured_vpp": 2.06
+      },
+      "checks": {
+        "mode": true,
+        "source": true,
+        "slope": true,
+        "level": true,
+        "physical_signal": true,
+        "active_status": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+GREaterthan-0.0001s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "width_s": 0.0001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "width_s": 0.0001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+GREaterthan-0.0005s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "width_s": 0.0005,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "width_s": 0.0005,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+GREaterthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "width_s": 0.001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "width_s": 0.001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+LESSthan-0.0001s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "width_s": 0.0001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "width_s": 0.0001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+LESSthan-0.0005s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "width_s": 0.0005,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "width_s": 0.0005,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "+LESSthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "width_s": 0.001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "width_s": 0.001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-GREaterthan-0.0001s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "width_s": 0.0001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "width_s": 0.0001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-GREaterthan-0.0005s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "width_s": 0.0005,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "width_s": 0.0005,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-GREaterthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "width_s": 0.001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "width_s": 0.001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-LESSthan-0.0001s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "width_s": 0.0001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "width_s": 0.0001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-LESSthan-0.0005s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "width_s": 0.0005,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "width_s": 0.0005,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pulse-grid",
+      "name": "-LESSthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "width_s": 0.001,
+        "source": "CHANnel1"
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "width_s": 0.001,
+        "sensitivity_div": 0.5,
+        "source": "CH1"
+      },
+      "checks": {
+        "mode": true,
+        "polarity": true,
+        "width": true,
+        "sensitivity": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+GREaterthan-PA-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "window": "PA",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "window": "P_WIN_A",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+GREaterthan-PA-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "window": "PA",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "window": "P_WIN_A",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+GREaterthan-PB-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "window": "PB",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "window": "P_WIN_B",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+GREaterthan-PB-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "+GREaterthan",
+        "window": "PB",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "+GREATER THAN",
+        "window": "P_WIN_B",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+LESSthan-PA-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "window": "PA",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "window": "P_WIN_A",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+LESSthan-PA-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "window": "PA",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "window": "P_WIN_A",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+LESSthan-PB-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "window": "PB",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "window": "P_WIN_B",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "+LESSthan-PB-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "+LESSthan",
+        "window": "PB",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "+LESS THAN",
+        "window": "P_WIN_B",
+        "level_a": 0.5,
+        "level_b": -0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-GREaterthan-NA-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "window": "NA",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "window": "N_WIN_A",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-GREaterthan-NA-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "window": "NA",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "window": "N_WIN_A",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-GREaterthan-NB-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "window": "NB",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "window": "N_WIN_B",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-GREaterthan-NB-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "-GREaterthan",
+        "window": "NB",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "-GREATER THAN",
+        "window": "N_WIN_B",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-LESSthan-NA-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "window": "NA",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "window": "N_WIN_A",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-LESSthan-NA-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "window": "NA",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "window": "N_WIN_A",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-LESSthan-NB-5e-05s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "window": "NB",
+        "time_s": 5e-05
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "window": "N_WIN_B",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 5e-05
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-slope-grid",
+      "name": "-LESSthan-NB-0.0002s",
+      "status": "pass",
+      "expected": {
+        "mode": "-LESSthan",
+        "window": "NB",
+        "time_s": 0.0002
+      },
+      "observed": {
+        "mode": "-LESS THAN",
+        "window": "N_WIN_B",
+        "level_a": -0.5,
+        "level_b": 0.5,
+        "time_s": 0.0002
+      },
+      "checks": {
+        "mode_relation": true,
+        "window": true,
+        "levels": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pattern-grid",
+      "name": "0-0",
+      "status": "pass",
+      "expected": {
+        "value": 0,
+        "mask": 0
+      },
+      "observed": {
+        "readback": "0, 0, None, None",
+        "value": 0,
+        "mask": 0
+      },
+      "checks": {
+        "value": true,
+        "mask": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pattern-grid",
+      "name": "1-1",
+      "status": "pass",
+      "expected": {
+        "value": 1,
+        "mask": 1
+      },
+      "observed": {
+        "readback": "1, 1, None, None",
+        "value": 1,
+        "mask": 1
+      },
+      "checks": {
+        "value": true,
+        "mask": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pattern-grid",
+      "name": "21930-65535",
+      "status": "pass",
+      "expected": {
+        "value": 21930,
+        "mask": 65535
+      },
+      "observed": {
+        "readback": "21930, 65535, None, None",
+        "value": 21930,
+        "mask": 65535
+      },
+      "checks": {
+        "value": true,
+        "mask": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-pattern-grid",
+      "name": "43690-61680",
+      "status": "pass",
+      "expected": {
+        "value": 43690,
+        "mask": 61680
+      },
+      "observed": {
+        "readback": "41120, 61680, None, None",
+        "value": 41120,
+        "mask": 61680
+      },
+      "checks": {
+        "value": true,
+        "mask": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "0-0-GREaterthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 0,
+        "mask": 0,
+        "qualifier": "GREaterthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "0,0",
+        "qualifier": "GREATER THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "0-0-GREaterthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 0,
+        "mask": 0,
+        "qualifier": "GREaterthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "0,0",
+        "qualifier": "GREATER THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "0-0-LESSthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 0,
+        "mask": 0,
+        "qualifier": "LESSthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "0,0",
+        "qualifier": "LESS THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "0-0-LESSthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 0,
+        "mask": 0,
+        "qualifier": "LESSthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "0,0",
+        "qualifier": "LESS THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "1-1-GREaterthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 1,
+        "mask": 1,
+        "qualifier": "GREaterthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "1,1",
+        "qualifier": "GREATER THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "1-1-GREaterthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 1,
+        "mask": 1,
+        "qualifier": "GREaterthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "1,1",
+        "qualifier": "GREATER THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "1-1-LESSthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 1,
+        "mask": 1,
+        "qualifier": "LESSthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "1,1",
+        "qualifier": "LESS THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "1-1-LESSthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 1,
+        "mask": 1,
+        "qualifier": "LESSthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "1,1",
+        "qualifier": "LESS THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "21930-65535-GREaterthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 21930,
+        "mask": 65535,
+        "qualifier": "GREaterthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "21930,65535",
+        "qualifier": "GREATER THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "21930-65535-GREaterthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 21930,
+        "mask": 65535,
+        "qualifier": "GREaterthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "21930,65535",
+        "qualifier": "GREATER THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "21930-65535-LESSthan-1e-06s",
+      "status": "pass",
+      "expected": {
+        "value": 21930,
+        "mask": 65535,
+        "qualifier": "LESSthan",
+        "time_s": 1e-06
+      },
+      "observed": {
+        "pattern": "21930,65535",
+        "qualifier": "LESS THAN",
+        "time_s": 1e-06
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-duration-grid",
+      "name": "21930-65535-LESSthan-0.001s",
+      "status": "pass",
+      "expected": {
+        "value": 21930,
+        "mask": 65535,
+        "qualifier": "LESSthan",
+        "time_s": 0.001
+      },
+      "observed": {
+        "pattern": "21930,65535",
+        "qualifier": "LESS THAN",
+        "time_s": 0.001
+      },
+      "checks": {
+        "pattern": true,
+        "qualifier": true,
+        "time": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-ODDfield-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "ODDfield",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "ODD FIELD",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-ODDfield-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "ODDfield",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "ODD FIELD",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-EVENfield-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "EVENfield",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "EVEN FIELD",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-EVENfield-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "EVENfield",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "EVEN FIELD",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-LINE-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "LINE",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "LINE",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-LINE-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "LINE",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "LINE",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-ALLLines-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "ALLLines",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "ALL LINES",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "NTSC-ALLLines-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "NTSC",
+        "mode": "ALLLines",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "NTSC",
+        "mode": "ALL LINES",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-ODDfield-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "ODDfield",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "ODD FIELD",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-ODDfield-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "ODDfield",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "ODD FIELD",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-EVENfield-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "EVENfield",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "EVEN FIELD",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-EVENfield-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "EVENfield",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "EVEN FIELD",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-LINE-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "LINE",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "LINE",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-LINE-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "LINE",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "LINE",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-ALLLines-POSitive",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "ALLLines",
+        "polarity": "POSitive"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "ALL LINES",
+        "polarity": "POSITIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-video-grid",
+      "name": "PALSecam-ALLLines-NEGative",
+      "status": "pass",
+      "expected": {
+        "standard": "PALSecam",
+        "mode": "ALLLines",
+        "polarity": "NEGative"
+      },
+      "observed": {
+        "standard": "PAL/SECAM",
+        "mode": "ALL LINES",
+        "polarity": "NEGATIVE",
+        "line": 10.0
+      },
+      "checks": {
+        "standard": true,
+        "mode": true,
+        "polarity": true,
+        "line": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel1-EDGE",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "type": "EDGE"
+      },
+      "observed": {
+        "source": "CH1",
+        "type": "EDGE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel1-PULSe",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "type": "PULSe"
+      },
+      "observed": {
+        "source": "CH1",
+        "type": "PULSE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel1-SLOPe",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "type": "SLOPe"
+      },
+      "observed": {
+        "source": "CH1",
+        "type": "SLOPE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel1-VIDEO",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel1",
+        "type": "VIDEO"
+      },
+      "observed": {
+        "source": "CH1",
+        "type": "VIDEO",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel2-EDGE",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "type": "EDGE"
+      },
+      "observed": {
+        "source": "CH2",
+        "type": "EDGE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel2-PULSe",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "type": "PULSe"
+      },
+      "observed": {
+        "source": "CH2",
+        "type": "PULSE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel2-SLOPe",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "type": "SLOPe"
+      },
+      "observed": {
+        "source": "CH2",
+        "type": "SLOPE",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-alternate-grid",
+      "name": "CHANnel2-VIDEO",
+      "status": "pass",
+      "expected": {
+        "source": "CHANnel2",
+        "type": "VIDEO"
+      },
+      "observed": {
+        "source": "CH2",
+        "type": "VIDEO",
+        "time_scale": 0.0002
+      },
+      "checks": {
+        "source": true,
+        "type": true,
+        "time_scale": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "EDGE-DC",
+      "status": "pass",
+      "expected": {
+        "mode": "EDGE",
+        "coupling": "DC"
+      },
+      "observed": {
+        "readback": "DC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "EDGE-AC",
+      "status": "pass",
+      "expected": {
+        "mode": "EDGE",
+        "coupling": "AC"
+      },
+      "observed": {
+        "readback": "AC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "EDGE-HF",
+      "status": "pass",
+      "expected": {
+        "mode": "EDGE",
+        "coupling": "HF"
+      },
+      "observed": {
+        "readback": "HF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "EDGE-LF",
+      "status": "pass",
+      "expected": {
+        "mode": "EDGE",
+        "coupling": "LF"
+      },
+      "observed": {
+        "readback": "LF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "PULSE-DC",
+      "status": "pass",
+      "expected": {
+        "mode": "PULSE",
+        "coupling": "DC"
+      },
+      "observed": {
+        "readback": "DC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "PULSE-AC",
+      "status": "pass",
+      "expected": {
+        "mode": "PULSE",
+        "coupling": "AC"
+      },
+      "observed": {
+        "readback": "AC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "PULSE-HF",
+      "status": "pass",
+      "expected": {
+        "mode": "PULSE",
+        "coupling": "HF"
+      },
+      "observed": {
+        "readback": "HF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "PULSE-LF",
+      "status": "pass",
+      "expected": {
+        "mode": "PULSE",
+        "coupling": "LF"
+      },
+      "observed": {
+        "readback": "LF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "SLOPE-DC",
+      "status": "pass",
+      "expected": {
+        "mode": "SLOPE",
+        "coupling": "DC"
+      },
+      "observed": {
+        "readback": "DC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "SLOPE-AC",
+      "status": "pass",
+      "expected": {
+        "mode": "SLOPE",
+        "coupling": "AC"
+      },
+      "observed": {
+        "readback": "AC"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "SLOPE-HF",
+      "status": "pass",
+      "expected": {
+        "mode": "SLOPE",
+        "coupling": "HF"
+      },
+      "observed": {
+        "readback": "HF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "SLOPE-LF",
+      "status": "pass",
+      "expected": {
+        "mode": "SLOPE",
+        "coupling": "LF"
+      },
+      "observed": {
+        "readback": "LF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "holdoff-5e-07s",
+      "status": "pass",
+      "expected": {
+        "holdoff_s": 5e-07
+      },
+      "observed": {
+        "readback": 5e-07
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "holdoff-0.001s",
+      "status": "pass",
+      "expected": {
+        "holdoff_s": 0.001
+      },
+      "observed": {
+        "readback": 0.001
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "holdoff-0.1s",
+      "status": "pass",
+      "expected": {
+        "holdoff_s": 0.1
+      },
+      "observed": {
+        "readback": 0.1
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-trigger-common-grid",
+      "name": "holdoff-1s",
+      "status": "pass",
+      "expected": {
+        "holdoff_s": 1.0
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-math-operations",
+      "name": "A+B",
+      "status": "pass",
+      "expected": {
+        "operation": "A+B"
+      },
+      "observed": {
+        "readback": "A+B",
+        "points": 600,
+        "raw_span": 255,
+        "unique_values": 51
+      },
+      "checks": {
+        "operation": true,
+        "nonempty": true,
+        "varying_data": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-math-operations",
+      "name": "A-B",
+      "status": "pass",
+      "expected": {
+        "operation": "A-B"
+      },
+      "observed": {
+        "readback": "A-B",
+        "points": 600,
+        "raw_span": 255,
+        "unique_values": 48
+      },
+      "checks": {
+        "operation": true,
+        "nonempty": true,
+        "varying_data": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-math-operations",
+      "name": "AB",
+      "status": "pass",
+      "expected": {
+        "operation": "AB"
+      },
+      "observed": {
+        "readback": "A*B",
+        "points": 600,
+        "raw_span": 255,
+        "unique_values": 106
+      },
+      "checks": {
+        "operation": true,
+        "nonempty": true,
+        "varying_data": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-fft-grid",
+      "name": "1000hz",
+      "status": "pass",
+      "expected": {
+        "operation": "FFT",
+        "carrier_hz": 1000
+      },
+      "observed": {
+        "readback": "FFT",
+        "display": "ON",
+        "points": 512,
+        "raw_span": 88,
+        "unique_values": 20
+      },
+      "checks": {
+        "operation": true,
+        "display": true,
+        "nonempty": true,
+        "spectrum_structure": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-fft-grid",
+      "name": "5000hz",
+      "status": "pass",
+      "expected": {
+        "operation": "FFT",
+        "carrier_hz": 5000
+      },
+      "observed": {
+        "readback": "FFT",
+        "display": "ON",
+        "points": 512,
+        "raw_span": 89,
+        "unique_values": 22
+      },
+      "checks": {
+        "operation": true,
+        "display": true,
+        "nonempty": true,
+        "spectrum_structure": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-fft-grid",
+      "name": "10000hz",
+      "status": "pass",
+      "expected": {
+        "operation": "FFT",
+        "carrier_hz": 10000
+      },
+      "observed": {
+        "readback": "FFT",
+        "display": "ON",
+        "points": 512,
+        "raw_span": 87,
+        "unique_values": 19
+      },
+      "checks": {
+        "operation": true,
+        "display": true,
+        "nonempty": true,
+        "spectrum_structure": true
+      },
+      "error": null
+    }
+  ]
+}

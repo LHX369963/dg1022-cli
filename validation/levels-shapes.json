@@ -1,0 +1,861 @@
+{
+  "started_at_unix": 1784464875.038711,
+  "duration_seconds": 136.828,
+  "counts": {
+    "pass": 42,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "group": "dg-dc-levels",
+      "name": "ch1--1v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "dc_volts": -1.0
+      },
+      "observed": {
+        "VAVerage": -1.02,
+        "dg_offset": -1.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch1--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "dc_volts": -0.5
+      },
+      "observed": {
+        "VAVerage": -0.526,
+        "dg_offset": -0.5
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch1-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "dc_volts": 0.0
+      },
+      "observed": {
+        "VAVerage": -0.00937,
+        "dg_offset": 0.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch1-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "dc_volts": 0.5
+      },
+      "observed": {
+        "VAVerage": 0.5,
+        "dg_offset": 0.5
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch1-+1v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "dc_volts": 1.0
+      },
+      "observed": {
+        "VAVerage": 0.99,
+        "dg_offset": 1.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch1--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": -0.5
+      },
+      "observed": {
+        "VPP": 2.16,
+        "VAVerage": -0.503,
+        "FREQuency": 1000.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch1-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": 0.0
+      },
+      "observed": {
+        "VPP": 2.04,
+        "VAVerage": 0.00807,
+        "FREQuency": 992.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch1-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": 0.5
+      },
+      "observed": {
+        "VPP": 2.14,
+        "VAVerage": 0.49,
+        "FREQuency": 1000.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-square-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "duty_percent": 20.0
+      },
+      "observed": {
+        "PDUTycycle": 0.2,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 20.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-pulse-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "duty_percent": 20.0
+      },
+      "observed": {
+        "PDUTycycle": 0.2,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 20.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-square-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "duty_percent": 50.0
+      },
+      "observed": {
+        "PDUTycycle": 0.496,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 50.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-pulse-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "duty_percent": 50.0
+      },
+      "observed": {
+        "PDUTycycle": 0.496,
+        "FREQuency": 1000.0,
+        "VPP": 2.06,
+        "dg_duty": 50.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-square-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "duty_percent": 80.0
+      },
+      "observed": {
+        "PDUTycycle": 0.8,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 80.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch1-pulse-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "duty_percent": 80.0
+      },
+      "observed": {
+        "PDUTycycle": 0.8,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 80.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch1-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "symmetry_percent": 20.0
+      },
+      "observed": {
+        "dg_symmetry": 20.0,
+        "sample_rising_percent": 29.865125240847785,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch1-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "symmetry_percent": 50.0
+      },
+      "observed": {
+        "dg_symmetry": 50.0,
+        "sample_rising_percent": 57.79661016949152,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch1-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "symmetry_percent": 80.0
+      },
+      "observed": {
+        "dg_symmetry": 80.0,
+        "sample_rising_percent": 80.55555555555556,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch1-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "noise_vpp": 0.5
+      },
+      "observed": {
+        "VPP": 0.452,
+        "VRMS": 0.129,
+        "VAVerage": -0.00629
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch1-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "noise_vpp": 1.0
+      },
+      "observed": {
+        "VPP": 0.92,
+        "VRMS": 0.277,
+        "VAVerage": 0.0038
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch1-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "noise_vpp": 2.0
+      },
+      "observed": {
+        "VPP": 1.9,
+        "VRMS": 0.592,
+        "VAVerage": -0.018
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch1-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "noise_vpp": 4.0
+      },
+      "observed": {
+        "VPP": 3.64,
+        "VRMS": 1.05,
+        "VAVerage": -0.0189
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch2--1v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "dc_volts": -1.0
+      },
+      "observed": {
+        "VAVerage": -1.01,
+        "dg_offset": -1.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch2--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "dc_volts": -0.5
+      },
+      "observed": {
+        "VAVerage": -0.525,
+        "dg_offset": -0.5
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch2-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "dc_volts": 0.0
+      },
+      "observed": {
+        "VAVerage": -0.0102,
+        "dg_offset": 0.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch2-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "dc_volts": 0.5
+      },
+      "observed": {
+        "VAVerage": 0.49,
+        "dg_offset": 0.5
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-dc-levels",
+      "name": "ch2-+1v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "dc_volts": 1.0
+      },
+      "observed": {
+        "VAVerage": 0.987,
+        "dg_offset": 1.0
+      },
+      "checks": {
+        "dg_offset": true,
+        "scope_average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch2--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": -0.5
+      },
+      "observed": {
+        "VPP": 2.16,
+        "VAVerage": -0.498,
+        "FREQuency": 1000.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch2-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": 0.0
+      },
+      "observed": {
+        "VPP": 2.04,
+        "VAVerage": 0.0117,
+        "FREQuency": 1000.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-offsets",
+      "name": "ch2-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "frequency_hz": 1000,
+        "vpp": 2.0,
+        "offset": 0.5
+      },
+      "observed": {
+        "VPP": 2.16,
+        "VAVerage": 0.485,
+        "FREQuency": 1000.0
+      },
+      "checks": {
+        "frequency": true,
+        "vpp": true,
+        "average": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-square-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "duty_percent": 20.0
+      },
+      "observed": {
+        "PDUTycycle": 0.2,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 20.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-pulse-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "duty_percent": 20.0
+      },
+      "observed": {
+        "PDUTycycle": 0.2,
+        "FREQuency": 1000.0,
+        "VPP": 2.06,
+        "dg_duty": 20.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-square-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "duty_percent": 50.0
+      },
+      "observed": {
+        "PDUTycycle": 0.496,
+        "FREQuency": 1000.0,
+        "VPP": 2.06,
+        "dg_duty": 50.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-pulse-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "duty_percent": 50.0
+      },
+      "observed": {
+        "PDUTycycle": 0.496,
+        "FREQuency": 1000.0,
+        "VPP": 2.06,
+        "dg_duty": 50.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-square-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "duty_percent": 80.0
+      },
+      "observed": {
+        "PDUTycycle": 0.8,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 80.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-duty",
+      "name": "ch2-pulse-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "duty_percent": 80.0
+      },
+      "observed": {
+        "PDUTycycle": 0.8,
+        "FREQuency": 1000.0,
+        "VPP": 2.04,
+        "dg_duty": 80.0
+      },
+      "checks": {
+        "dg_duty": true,
+        "scope_duty": true,
+        "frequency": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch2-20pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "symmetry_percent": 20.0
+      },
+      "observed": {
+        "dg_symmetry": 20.0,
+        "sample_rising_percent": 28.67924528301887,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch2-50pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "symmetry_percent": 50.0
+      },
+      "observed": {
+        "dg_symmetry": 50.0,
+        "sample_rising_percent": 58.3617747440273,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-ramp-symmetry",
+      "name": "ch2-80pct",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "symmetry_percent": 80.0
+      },
+      "observed": {
+        "dg_symmetry": 80.0,
+        "sample_rising_percent": 79.76424361493123,
+        "sample_count": 600
+      },
+      "checks": {
+        "dg_symmetry": true,
+        "waveform_symmetry": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch2-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "noise_vpp": 0.5
+      },
+      "observed": {
+        "VPP": 0.5,
+        "VRMS": 0.168,
+        "VAVerage": 0.000213
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch2-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "noise_vpp": 1.0
+      },
+      "observed": {
+        "VPP": 0.976,
+        "VRMS": 0.341,
+        "VAVerage": -0.00727
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch2-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "noise_vpp": 2.0
+      },
+      "observed": {
+        "VPP": 1.98,
+        "VRMS": 0.703,
+        "VAVerage": -0.0317
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-noise",
+      "name": "ch2-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "noise_vpp": 4.0
+      },
+      "observed": {
+        "VPP": 4.2,
+        "VRMS": 1.4,
+        "VAVerage": 0.00353
+      },
+      "checks": {
+        "nonzero_vpp": true,
+        "nonzero_rms": true,
+        "near_zero_mean": true
+      },
+      "error": null
+    }
+  ]
+}

@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .catalog import COMMANDS, CommandSpec, get_command, render_command
-from .errors import Dg1022Error, ProtocolError
+from .errors import Dg1022Error, ProtocolError, TransportError
 from .transport import LinuxUsbtmc, choose_device, discover_devices
 
 
@@ -41,6 +41,26 @@ SNAPSHOT_COMMANDS = {
     "burst": "BURSt:STATe?",
     "coupling": "COUPling?",
 }
+
+_NEGATIVE_VALUE_PREFIX = "__DG1022_NEGATIVE_VALUE__"
+
+
+def _protect_negative_unit_values(argv: Sequence[str]) -> list[str]:
+    """Keep argparse from treating values such as -0.5V as option flags."""
+    pattern = re.compile(r"^-\d+(?:\.\d*)?(?:[eE][+-]?\d+)?[A-Za-z]+$")
+    return [_NEGATIVE_VALUE_PREFIX + value if pattern.fullmatch(value) else value for value in argv]
+
+
+def _restore_negative_unit_values(args: argparse.Namespace) -> None:
+    for name, value in vars(args).items():
+        if isinstance(value, str) and value.startswith(_NEGATIVE_VALUE_PREFIX):
+            setattr(args, name, value.removeprefix(_NEGATIVE_VALUE_PREFIX))
+        elif isinstance(value, list):
+            setattr(args, name, [
+                item.removeprefix(_NEGATIVE_VALUE_PREFIX)
+                if isinstance(item, str) and item.startswith(_NEGATIVE_VALUE_PREFIX) else item
+                for item in value
+            ])
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -194,7 +214,7 @@ def _settle_after_write(command: str) -> None:
     elif upper.startswith(("DATA:RENAME", "DATA:DELETE")):
         time.sleep(0.5)
     elif upper == "DATA" or upper.startswith(("DATA ", "DATA:DAC")):
-        time.sleep(0.5)
+        time.sleep(min(10.0, 0.5 + len(command) / 3_000.0))
 
 
 def _run_batch(generator: LinuxUsbtmc, lines) -> int:
@@ -212,23 +232,40 @@ def _run_batch(generator: LinuxUsbtmc, lines) -> int:
 def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> None:
     spec = get_command("apply." + args.waveform)
     command = render_command(spec, args.channel)
+    suffix = "" if args.channel == 1 else ":CH2"
+    restore_enabled = False
+    if args.waveform == "dc" and args.enable is None:
+        restore_enabled = generator.query_text(f"OUTPut{suffix}?").strip().upper() == "ON"
     values = [value for value in (args.frequency, args.amplitude, args.offset) if value is not None]
     if values:
         if args.frequency is None or (args.offset is not None and args.amplitude is None):
             raise ProtocolError("APPLy parameters are positional; provide frequency before amplitude/offset")
         command += " " + ",".join(values)
     generator.write(command)
-    suffix = "" if args.channel == 1 else ":CH2"
+    if args.waveform == "dc":
+        # This unit can update the DC registers without committing the physical
+        # level. Repeating the idempotent APPLY after settling commits it without
+        # briefly disabling an already-enabled output.
+        time.sleep(0.5)
+        generator.write(command)
+        if args.enable is True or restore_enabled:
+            generator.write(f"OUTPut{suffix} OFF")
     if args.phase is not None:
         generator.write(f"PHASe{suffix} {args.phase}")
         # APPLY and phase register changes need about one second before ALIGN
         # reliably commits the physical dual-channel relationship on this unit.
         time.sleep(0.9)
         generator.write("PHASe:ALIGN")
+        time.sleep(0.3)
+        generator.write(f"PHASe{suffix} {args.phase}")
+        time.sleep(0.9)
+        generator.write("PHASe:ALIGN")
     if args.load is not None:
         generator.write(f"OUTPut:LOAD{suffix} {args.load}")
     if args.enable is not None:
         generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
+    elif restore_enabled:
+        generator.write(f"OUTPut{suffix} ON")
 
 
 def _configure_mode(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[str, str]:
@@ -253,19 +290,27 @@ def _configure_mode(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[st
     has_parameters = any(value is not None for value in options.values()) or args.source is not None
     if has_parameters:
         generator.write(f"{mode}:STATe ON")
-        generator.write(f"{mode}:SOURce {args.source}")
+        commands = [f"{mode}:SOURce {args.source}"]
         if args.internal_waveform:
-            generator.write(f"{mode}:INTernal:FUNCtion {args.internal_waveform}")
+            commands.append(f"{mode}:INTernal:FUNCtion {args.internal_waveform}")
         if args.internal_frequency:
-            generator.write(f"{mode}:INTernal:FREQuency {args.internal_frequency}")
+            commands.append(f"{mode}:INTernal:FREQuency {args.internal_frequency}")
         if args.depth:
-            generator.write(f"AM:DEPTh {args.depth}")
+            commands.append(f"AM:DEPTh {args.depth}")
         if args.deviation:
-            generator.write(f"{mode}:DEViation {args.deviation}")
+            commands.append(f"{mode}:DEViation {args.deviation}")
         if args.hop_frequency:
-            generator.write(f"FSK:FREQuency {args.hop_frequency}")
+            commands.append(f"FSK:FREQuency {args.hop_frequency}")
         if args.rate:
-            generator.write(f"FSK:INTernal:RATE {args.rate}")
+            commands.append(f"FSK:INTernal:RATE {args.rate}")
+        for command in commands:
+            generator.write(command)
+        # The first parameter update immediately after enabling a modulation
+        # family is occasionally ignored by this unit. Replaying the idempotent
+        # configuration after it settles makes the high-level operation atomic.
+        time.sleep(0.3)
+        for command in commands:
+            generator.write(command)
     generator.write(f"{mode}:STATe {'ON' if args.enable else 'OFF'}")
     return {"mode": mode, "state": "ON" if args.enable else "OFF"}
 
@@ -347,24 +392,33 @@ def _run_arb(generator: LinuxUsbtmc, args: argparse.Namespace) -> int:
         if args.name.upper() != "VOLATILE":
             _validate_arb_name(args.name)
         command = f"DATA:LOAD {args.name}"
-        generator.write(command)
-        time.sleep(0.1)
+        def transfer() -> tuple[int, bytes]:
+            generator.write(command)
+            time.sleep(0.5)
+            try:
+                header = generator.read(max_bytes=256).decode("ascii").strip()
+            except UnicodeDecodeError as exc:
+                raise ProtocolError("DATA:LOAD returned a binary header") from exc
+            match = re.fullmatch(r"ArbData,HEADER,(\d+)", header)
+            if not match:
+                raise ProtocolError(f"unexpected DATA:LOAD header: {header!r}")
+            points = int(match.group(1))
+            generator.write(command)
+            time.sleep(0.5)
+            payload = generator.read(max_bytes=points * 2 + 16)
+            if len(payload) != points * 2:
+                raise ProtocolError(f"DATA:LOAD returned {len(payload)} bytes for {points} points")
+            generator.write(command)
+            time.sleep(0.5)
+            return points, payload
+
         try:
-            header = generator.read(max_bytes=256).decode("ascii").strip()
-        except UnicodeDecodeError as exc:
-            raise ProtocolError("DATA:LOAD returned a binary header") from exc
-        match = re.fullmatch(r"ArbData,HEADER,(\d+)", header)
-        if not match:
-            raise ProtocolError(f"unexpected DATA:LOAD header: {header!r}")
-        points = int(match.group(1))
-        generator.write(command)
-        time.sleep(0.1)
-        payload = generator.read(max_bytes=points * 2 + 16)
-        if len(payload) != points * 2:
-            raise ProtocolError(f"DATA:LOAD returned {len(payload)} bytes for {points} points")
-        # A third command terminates the DG1022 transfer state and intentionally has no response.
-        generator.write(command)
-        time.sleep(0.1)
+            points, payload = transfer()
+        except TransportError:
+            generator.close()
+            time.sleep(0.5)
+            generator.__enter__()
+            points, payload = transfer()
         args.output.parent.mkdir(parents=True, exist_ok=True)
         values = struct.unpack(f"<{points}H", payload)
         if args.format == "bin":
@@ -400,7 +454,9 @@ def _run_arb(generator: LinuxUsbtmc, args: argparse.Namespace) -> int:
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = _build_parser()
-    args = parser.parse_args(argv)
+    raw_argv = list(sys.argv[1:] if argv is None else argv)
+    args = parser.parse_args(_protect_negative_unit_values(raw_argv))
+    _restore_negative_unit_values(args)
     try:
         if args.command == "list":
             for item in discover_devices():

@@ -116,6 +116,10 @@ sample-aligned between channels and must not be used for cross-channel phase wor
 python -m pytest
 ```
 
+The current unit suite has 15 tests. Connected acceptance reports are stored in
+`validation/`; run an individual group with, for example,
+`python tools/live_acceptance.py dg-advanced`.
+
 The checked-in official references are:
 
 - `docs/official/DG1000_ProgrammingGuide_EN.pdf`

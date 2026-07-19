@@ -1,0 +1,2462 @@
+{
+  "started_at_unix": 1784467782.3914847,
+  "duration_seconds": 114.525,
+  "counts": {
+    "pass": 136,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.type-NORMal",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.type",
+        "value": "NORMal"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "NORMAL"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.type-AVERage",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.type",
+        "value": "AVERage"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "AVERAGE"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.type-PEAKdetect",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.type",
+        "value": "PEAKdetect"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "Peak Detect"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.mode-REAL_TIME",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.mode",
+        "value": "REAL_TIME"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "REAL_TIME"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.mode-EQUAL_TIME",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.mode",
+        "value": "EQUAL_TIME"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "EQUAL_TIME"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.mode-ROLL",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.mode",
+        "value": "ROLL"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "EQUAL_TIME",
+        "device_limitation": "documented ROLL value ignored by DS1152E firmware"
+      },
+      "checks": {
+        "firmware_limitation_reproduced": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-2",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "2"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "2"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-4",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "4"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "4"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-8",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "8"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "8"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-16",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "16"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "16"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-32",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "32"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "32"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-64",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "64"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "64"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-128",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "128"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "128"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.averages-256",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.averages",
+        "value": "256"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "256"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.memory-depth-NORMal",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.memory-depth",
+        "value": "NORMal"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "NORMAL"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-acquisition-registers",
+      "name": "acquire.memory-depth-LONG",
+      "status": "pass",
+      "expected": {
+        "command": "acquire.memory-depth",
+        "value": "LONG"
+      },
+      "observed": {
+        "set_output": "",
+        "readback": "LONG"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch1-normal",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "NORMal",
+        "point_range": [
+          500,
+          700
+        ]
+      },
+      "observed": {
+        "point_count": 600,
+        "minimum_v": -1.06,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch1-maximum",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "MAXimum",
+        "point_range": [
+          8000,
+          1100000
+        ]
+      },
+      "observed": {
+        "point_count": 524288,
+        "minimum_v": -1.06,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch1-raw",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "RAW",
+        "point_range": [
+          8000,
+          1100000
+        ]
+      },
+      "observed": {
+        "point_count": 524288,
+        "minimum_v": -1.06,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch2-normal",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "NORMal",
+        "point_range": [
+          500,
+          700
+        ]
+      },
+      "observed": {
+        "point_count": 600,
+        "minimum_v": -1.04,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch2-maximum",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "MAXimum",
+        "point_range": [
+          8000,
+          1100000
+        ]
+      },
+      "observed": {
+        "point_count": 524288,
+        "minimum_v": -1.04,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-waveform-depth",
+      "name": "ch2-raw",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "RAW",
+        "point_range": [
+          8000,
+          1100000
+        ]
+      },
+      "observed": {
+        "point_count": 524288,
+        "minimum_v": -1.04,
+        "maximum_v": 1.02,
+        "points_mode_after": "MAXIMUM"
+      },
+      "checks": {
+        "point_count": true,
+        "physical_signal": true,
+        "mode_restored": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch1-dc",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "coupling": "DC"
+      },
+      "observed": {
+        "readback": "DC",
+        "sample_span_v": 2.08,
+        "mean_v": -0.2432666666666667
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch1-ac",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "coupling": "AC"
+      },
+      "observed": {
+        "readback": "AC",
+        "sample_span_v": 2.08,
+        "mean_v": -0.037400000000000024
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch1-gnd",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "coupling": "GND"
+      },
+      "observed": {
+        "readback": "GND",
+        "sample_span_v": 0.0,
+        "mean_v": 0.0
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.invert-off",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.invert",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.bandwidth-limit-off",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.bandwidth-limit",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.filter-off",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.filter",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.vernier-off",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.vernier",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "Coarse"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.invert-on",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.invert",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.bandwidth-limit-on",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.bandwidth-limit",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.filter-on",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.filter",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch1-channel.vernier-on",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "command": "channel.vernier",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "Fine"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch1-1x",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "probe": 1
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch1-5x",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "probe": 5
+      },
+      "observed": {
+        "readback": 5.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch1-10x",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "probe": 10
+      },
+      "observed": {
+        "readback": 10.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch1-100x",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "probe": 100
+      },
+      "observed": {
+        "readback": 100.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch1-1000x",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "probe": 1000
+      },
+      "observed": {
+        "readback": 1000.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-0.02vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 0.02
+      },
+      "observed": {
+        "readback": 0.02
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-0.05vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 0.05
+      },
+      "observed": {
+        "readback": 0.05
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-0.1vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 0.1
+      },
+      "observed": {
+        "readback": 0.1
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-0.2vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 0.2
+      },
+      "observed": {
+        "readback": 0.2
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-0.5vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 0.5
+      },
+      "observed": {
+        "readback": 0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-1vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 1.0
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch1-2vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "scale_v_div": 2.0
+      },
+      "observed": {
+        "readback": 2.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch1--1v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "offset_v": -1.0
+      },
+      "observed": {
+        "readback": -1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch1--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "offset_v": -0.5
+      },
+      "observed": {
+        "readback": -0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch1-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "offset_v": 0.0
+      },
+      "observed": {
+        "readback": 0.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch1-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "offset_v": 0.5
+      },
+      "observed": {
+        "readback": 0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch1-+1v",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "offset_v": 1.0
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch2-dc",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "coupling": "DC"
+      },
+      "observed": {
+        "readback": "DC",
+        "sample_span_v": 2.06,
+        "mean_v": 0.2306
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch2-ac",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "coupling": "AC"
+      },
+      "observed": {
+        "readback": "AC",
+        "sample_span_v": 2.04,
+        "mean_v": 0.029033333333333362
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-coupling",
+      "name": "ch2-gnd",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "coupling": "GND"
+      },
+      "observed": {
+        "readback": "GND",
+        "sample_span_v": 0.0,
+        "mean_v": 0.0
+      },
+      "checks": {
+        "readback": true,
+        "physical": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.invert-off",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.invert",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.bandwidth-limit-off",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.bandwidth-limit",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.filter-off",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.filter",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "OFF"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.vernier-off",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.vernier",
+        "value": "OFF"
+      },
+      "observed": {
+        "readback": "Coarse"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.invert-on",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.invert",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.bandwidth-limit-on",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.bandwidth-limit",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.filter-on",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.filter",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "ON"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-channel-switches",
+      "name": "ch2-channel.vernier-on",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "command": "channel.vernier",
+        "value": "ON"
+      },
+      "observed": {
+        "readback": "Fine"
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch2-1x",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "probe": 1
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch2-5x",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "probe": 5
+      },
+      "observed": {
+        "readback": 5.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch2-10x",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "probe": 10
+      },
+      "observed": {
+        "readback": 10.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch2-100x",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "probe": 100
+      },
+      "observed": {
+        "readback": 100.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-probe-grid",
+      "name": "ch2-1000x",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "probe": 1000
+      },
+      "observed": {
+        "readback": 1000.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-0.02vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 0.02
+      },
+      "observed": {
+        "readback": 0.02
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-0.05vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 0.05
+      },
+      "observed": {
+        "readback": 0.05
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-0.1vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 0.1
+      },
+      "observed": {
+        "readback": 0.1
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-0.2vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 0.2
+      },
+      "observed": {
+        "readback": 0.2
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-0.5vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 0.5
+      },
+      "observed": {
+        "readback": 0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-1vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 1.0
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-scale-grid",
+      "name": "ch2-2vdiv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "scale_v_div": 2.0
+      },
+      "observed": {
+        "readback": 2.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch2--1v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "offset_v": -1.0
+      },
+      "observed": {
+        "readback": -1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch2--0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "offset_v": -0.5
+      },
+      "observed": {
+        "readback": -0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch2-+0v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "offset_v": 0.0
+      },
+      "observed": {
+        "readback": 0.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch2-+0.5v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "offset_v": 0.5
+      },
+      "observed": {
+        "readback": 0.5
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-offset-grid",
+      "name": "ch2-+1v",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "offset_v": 1.0
+      },
+      "observed": {
+        "readback": 1.0
+      },
+      "checks": {
+        "readback": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vpp",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 2.08
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vmax",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vmax",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 1.02
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vmin",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vmin",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -1.06
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vamplitude",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vamplitude",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 2.01
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vtop",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vtop",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.986
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vbase",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vbase",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -1.02
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vaverage",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vaverage",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -0.241
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-vrms",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "vrms",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 1.01
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-overshoot",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "overshoot",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0201
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-preshoot",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "preshoot",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0197
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-frequency",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "frequency",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 1000.0
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-rise-time",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "rise-time",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": "<1.20e-05"
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-fall-time",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "fall-time",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": "<1.20e-05"
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-period",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "period",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.001
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-positive-width",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "positive-width",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0004
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-negative-width",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "negative-width",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0006
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-positive-duty",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "positive-duty",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.4
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-negative-duty",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "negative-duty",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.6
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-positive-delay",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "positive-delay",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -0.000656
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch1-negative-delay",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "metric": "negative-delay",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.00024
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vpp",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 2.06
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vmax",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vmax",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 1.02
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vmin",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vmin",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -1.04
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vamplitude",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vamplitude",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 2.0
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vtop",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vtop",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.983
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vbase",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vbase",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -1.02
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vaverage",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vaverage",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.229
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-vrms",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "vrms",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.997
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-overshoot",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "overshoot",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0172
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-preshoot",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "preshoot",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0172
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-frequency",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "frequency",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 2020.0
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-rise-time",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "rise-time",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": "<1.20e-05"
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-fall-time",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "fall-time",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": "<1.20e-05"
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-period",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "period",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.000496
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-positive-width",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "positive-width",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.000296
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-negative-width",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "negative-width",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.0002
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-positive-duty",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "positive-duty",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.597
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-negative-duty",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "negative-duty",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.403
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-positive-delay",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "positive-delay",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": -0.000656
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-automatic-measurements",
+      "name": "ch2-negative-delay",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "metric": "negative-delay",
+        "response": "finite or documented unavailable"
+      },
+      "observed": {
+        "value": 0.00024
+      },
+      "checks": {
+        "typed_response": true,
+        "physical_when_applicable": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-normal-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "normal",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 13699,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-normal-json",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "normal",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 69698,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-normal-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "normal",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 600,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-maximum-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "maximum",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 18301099,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-maximum-json",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "maximum",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 62485496,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-maximum-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "maximum",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 524288,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-raw-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "raw",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 18338410,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-raw-json",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "raw",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 62503798,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch1-raw-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "mode": "raw",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 524288,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-normal-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "normal",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 13538,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-normal-json",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "normal",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 69562,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-normal-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "normal",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 600,
+        "points": 600,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-maximum-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "maximum",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 17970892,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-maximum-json",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "maximum",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 62179138,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-maximum-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "maximum",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 524288,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-raw-csv",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "raw",
+        "format": "csv"
+      },
+      "observed": {
+        "bytes": 18048315,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-raw-json",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "raw",
+        "format": "json"
+      },
+      "observed": {
+        "bytes": 62279000,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    },
+    {
+      "group": "ds-cli-waveform-export",
+      "name": "ch2-raw-bin",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "mode": "raw",
+        "format": "bin"
+      },
+      "observed": {
+        "bytes": 524288,
+        "points": 524288,
+        "calibrated": true
+      },
+      "checks": {
+        "nonempty": true,
+        "point_count": true,
+        "calibrated": true
+      },
+      "error": null
+    }
+  ]
+}
