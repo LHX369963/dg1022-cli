@@ -84,6 +84,14 @@ dg1022 batch commands.scpi
 Use `--device /dev/usbtmcN` or `--serial SERIAL` when explicit selection is
 needed. Unit suffixes accepted by the instrument can be used in high-level values.
 
+Do not identify this generator from the USB product label alone. The tested
+DG1022 (`DG1D124605159`, USB `1ab1:0588`) has reported `DG3000 SERIES` through
+its USB descriptor, while some `lsusb` ID databases label the same VID:PID as
+`DS1000 SERIES`. Both labels are misleading for this unit. Use `dg1022 list` to
+find the `/dev/usbtmcN` node and `dg1022 info` (the instrument's `*IDN?`
+response) to confirm the model. A `DG...` serial number is used for automatic
+generator selection.
+
 When `output --phase` is supplied, the helper sends `PHASe:ALIGN` after writing
 the phase and allowing the unit time to finish waveform reconfiguration. Physical
 testing showed that writing the phase register alone does not deterministically
@@ -94,6 +102,9 @@ sample-aligned between channels and must not be used for cross-channel phase wor
 
 ## DG1022 Compatibility Notes
 
+- USB product strings and host-side `lsusb` names may incorrectly say
+  `DG3000 SERIES` or `DS1000 SERIES`; the `*IDN?` model and `DG...` serial are
+  authoritative.
 - Do not issue `USBTMC_IOCTL_EOM_ENABLE` to this instrument; reads time out after
   that ioctl. The transport intentionally omits it.
 - Queries wait 2 ms before reading. Ordinary writes wait 100 ms so a later USB
