@@ -29,7 +29,7 @@ device-reflash command in this project.
 Linux with Python 3.10 or newer and the kernel `usbtmc` driver is required.
 
 ```bash
-git clone <repository-url> dg1022
+git clone https://github.com/LHX369963/dg1022.git
 cd dg1022
 python3 -m venv .venv
 . .venv/bin/activate
