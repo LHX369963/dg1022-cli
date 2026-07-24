@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rigol-dg1022-cli"
+name = "dg1022-cli"
 version = "0.1.0"
 description = "Dependency-free command-line control for the RIGOL DG1022"
 readme = "README.md"
