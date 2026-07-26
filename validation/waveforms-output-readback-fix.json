@@ -1,0 +1,3003 @@
+{
+  "started_at_unix": 1785083720.5619748,
+  "duration_seconds": 305.364,
+  "counts": {
+    "pass": 66,
+    "fail": 14,
+    "error": 48
+  },
+  "results": [
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.484,
+        "VRMS": 0.166,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.34297520661157027
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.968,
+        "VRMS": 0.334,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.3450413223140496
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 1.96,
+        "VRMS": 0.676,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.3448979591836735
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 99.6,
+        "VPP": 3.88,
+        "VRMS": 1.33,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.3427835051546392
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-1000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.48,
+        "VRMS": 0.166,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.3458333333333334
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-1000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 996.0,
+        "VPP": 0.968,
+        "VRMS": 0.332,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.34297520661157027
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-1000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 992.0,
+        "VPP": 1.98,
+        "VRMS": 0.673,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.3398989898989899
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-1000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 3.88,
+        "VRMS": 1.32,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.3402061855670103
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-10000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 9960.0,
+        "VPP": 0.48,
+        "VRMS": 0.166,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.3458333333333334
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-10000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 9920.0,
+        "VPP": 0.968,
+        "VRMS": 0.333,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.34400826446280997
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-10000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 1.96,
+        "VRMS": 0.673,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.3433673469387755
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-10000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 3.88,
+        "VRMS": 1.32,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.3402061855670103
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.484,
+        "VRMS": 0.166,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.34297520661157027
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.976,
+        "VRMS": 0.335,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.3432377049180328
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 1.96,
+        "VRMS": 0.674,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.3438775510204082
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-sinusoid-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.96,
+        "VRMS": 1.34,
+        "dg_function": "CH1:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.3383838383838384
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.488,
+        "VRMS": 0.24,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.4918032786885246
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.976,
+        "VRMS": 0.482,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.49385245901639346
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 2.0,
+        "VRMS": 0.971,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4855
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 3.92,
+        "VRMS": 1.92,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4897959183673469
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-1000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.484,
+        "VRMS": 0.239,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.493801652892562
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-1000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.976,
+        "VRMS": 0.48,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.4918032786885246
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-1000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 1.96,
+        "VRMS": 0.967,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4933673469387755
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-1000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 3.92,
+        "VRMS": 1.91,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4872448979591837
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-10000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.488,
+        "VRMS": 0.239,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.48975409836065575
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-10000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.976,
+        "VRMS": 0.481,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.492827868852459
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-10000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 1.96,
+        "VRMS": 0.965,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4923469387755102
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-10000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 3.96,
+        "VRMS": 1.92,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.48484848484848486
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.504,
+        "VRMS": 0.239,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.4742063492063492
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.976,
+        "VRMS": 0.482,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.49385245901639346
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 2.02,
+        "VRMS": 0.97,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4801980198019802
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-square-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.28,
+        "VRMS": 1.94,
+        "dg_function": "CH1:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4532710280373831
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.48,
+        "VRMS": 0.134,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.2791666666666667
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.968,
+        "VRMS": 0.27,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.27892561983471076
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 1.96,
+        "VRMS": 0.549,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.28010204081632656
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 3.88,
+        "VRMS": 1.07,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.2757731958762887
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-1000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.48,
+        "VRMS": 0.133,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.27708333333333335
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-1000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.96,
+        "VRMS": 0.268,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.2791666666666667
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-1000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 1.92,
+        "VRMS": 0.546,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.28437500000000004
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-1000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 996.0,
+        "VPP": 3.8,
+        "VRMS": 1.06,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.27894736842105267
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-10000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.48,
+        "VRMS": 0.134,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.2791666666666667
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-10000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.96,
+        "VRMS": 0.269,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.28020833333333334
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-10000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 1.96,
+        "VRMS": 0.545,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.2780612244897959
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-10000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 9920.0,
+        "VPP": 3.84,
+        "VRMS": 1.07,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.27864583333333337
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 99200.0,
+        "VPP": 0.48,
+        "VRMS": 0.134,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.2791666666666667
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.968,
+        "VRMS": 0.27,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.27892561983471076
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 1.96,
+        "VRMS": 0.546,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.2785714285714286
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-ramp-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.92,
+        "VRMS": 1.08,
+        "dg_function": "CH1:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.2755102040816327
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.488,
+        "VRMS": 0.24,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.4918032786885246
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 0.976,
+        "VRMS": 0.482,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.49385245901639346
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 1.98,
+        "VRMS": 0.97,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4898989898989899
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100.0,
+        "VPP": 3.92,
+        "VRMS": 1.92,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4897959183673469
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-1000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.48,
+        "VRMS": 0.239,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.4979166666666667
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-1000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 0.976,
+        "VRMS": 0.48,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.4918032786885246
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-1000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 1.96,
+        "VRMS": 0.966,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4928571428571428
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-1000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 1000.0,
+        "VPP": 3.88,
+        "VRMS": 1.91,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 1000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4922680412371134
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-10000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.484,
+        "VRMS": 0.239,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.493801652892562
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-10000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 0.976,
+        "VRMS": 0.481,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.492827868852459
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-10000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 1.98,
+        "VRMS": 0.965,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.48737373737373735
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-10000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 10000.0,
+        "VPP": 4.16,
+        "VRMS": 1.91,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.45913461538461536
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100000hz-0.5vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.492,
+        "VRMS": 0.239,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 0.5,
+        "vrms_vpp_ratio": 0.48577235772357724
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100000hz-1vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 0.976,
+        "VRMS": 0.482,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 1.0,
+        "vrms_vpp_ratio": 0.49385245901639346
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100000hz-2vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 2.0,
+        "VRMS": 0.966,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.483
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch1-pulse-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 1,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.16,
+        "VRMS": 1.94,
+        "dg_function": "CH1:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4663461538461538
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-1000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-1000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-1000hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-1000hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-10000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-10000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-10000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 3.88,
+        "VRMS": 1.9,
+        "dg_function": "CH2:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4896907216494845
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": false,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-10000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 4.0,
+        "VRMS": 1.93,
+        "dg_function": "CH2:SIN",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4825
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": true,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.94,
+        "VRMS": 1.89,
+        "dg_function": "CH2:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4796954314720812
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": false,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-sinusoid-100000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SINusoid",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.04,
+        "VRMS": 1.92,
+        "dg_function": "CH2:SIN",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4752475247524752
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-1000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-1000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-1000hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-1000hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-10000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-10000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-10000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 3.86,
+        "VRMS": 1.89,
+        "dg_function": "CH2:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.48963730569948183
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": false,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-10000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 4.0,
+        "VRMS": 1.91,
+        "dg_function": "CH2:SQU",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4775
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.92,
+        "VRMS": 1.89,
+        "dg_function": "CH2:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.48214285714285715
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": false,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-square-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "SQUare",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.04,
+        "VRMS": 1.92,
+        "dg_function": "CH2:SQU",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4752475247524752
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-1000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-1000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-1000hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-1000hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-10000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-10000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-10000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 3.92,
+        "VRMS": 1.89,
+        "dg_function": "CH2:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.48214285714285715
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": false,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-10000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 4.0,
+        "VRMS": 1.92,
+        "dg_function": "CH2:RAMP",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.48
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": true,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.94,
+        "VRMS": 1.89,
+        "dg_function": "CH2:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4796954314720812
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": false,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-ramp-100000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "RAMP",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.04,
+        "VRMS": 1.92,
+        "dg_function": "CH2:RAMP",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4752475247524752
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": false
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-1000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-1000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-1000hz-2vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 2.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-1000hz-4vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 1000.0,
+        "vpp": 4.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "could not convert string to float: '>2.50e+04'"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-10000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-10000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-10000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 3.86,
+        "VRMS": 1.89,
+        "dg_function": "CH2:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.48963730569948183
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": false,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-10000hz-4vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 10000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 96200.0,
+        "VPP": 4.0,
+        "VRMS": 1.91,
+        "dg_function": "CH2:PULS",
+        "dg_frequency_hz": 10000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.4775
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": false,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100000hz-0.5vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 0.5
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100000hz-1vpp",
+      "status": "error",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 1.0
+      },
+      "observed": {},
+      "checks": {},
+      "error": "unavailable numeric response: 99e36"
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100000hz-2vpp",
+      "status": "fail",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 2.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 3.9,
+        "VRMS": 1.89,
+        "dg_function": "CH2:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 2.0,
+        "vrms_vpp_ratio": 0.4846153846153846
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": false,
+        "shape_factor": true
+      },
+      "error": null
+    },
+    {
+      "group": "dg-standard-waveforms",
+      "name": "ch2-pulse-100000hz-4vpp",
+      "status": "pass",
+      "expected": {
+        "channel": 2,
+        "waveform": "PULSe",
+        "frequency_hz": 100000.0,
+        "vpp": 4.0
+      },
+      "observed": {
+        "FREQuency": 100000.0,
+        "VPP": 4.04,
+        "VRMS": 1.91,
+        "dg_function": "CH2:PULS",
+        "dg_frequency_hz": 100000.0,
+        "dg_amplitude_vpp": 4.0,
+        "vrms_vpp_ratio": 0.47277227722772275
+      },
+      "checks": {
+        "function": true,
+        "dg_frequency": true,
+        "dg_amplitude": true,
+        "scope_frequency": true,
+        "scope_vpp": true,
+        "shape_factor": true
+      },
+      "error": null
+    }
+  ]
+}

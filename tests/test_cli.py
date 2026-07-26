@@ -19,6 +19,44 @@ class FakeGenerator:
         self.queries.append(command)
         if command == "*IDN?":
             return "RIGOL TECHNOLOGIES,DG1022,SERIAL,,00.02.07"
+        apply = next(
+            (item for item in reversed(self.writes) if item.upper().startswith("APPLY:")),
+            None,
+        )
+        if apply is not None:
+            head, values = apply.split(" ", 1)
+            waveform = head.split(":", 1)[1].split(":", 1)[0]
+            frequency, amplitude, offset = values.split(",")
+            upper = command.upper()
+            if upper.startswith("FUNCTION"):
+                channel = "CH2" if ":CH2" in head.upper() else "CH1"
+                return f"{channel}:{'ARB' if waveform.upper() == 'DC' else waveform}"
+            if upper.startswith("FREQUENCY"):
+                return str(cli._parse_quantity(
+                    frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
+                ))
+            if upper.startswith("VOLTAGE:UNIT"):
+                return "VPP"
+            if upper.startswith("VOLTAGE:OFFSET"):
+                return offset.removesuffix("V")
+            if upper.startswith("VOLTAGE"):
+                return amplitude.removesuffix("Vpp").removesuffix("VPP")
+            if upper.startswith("PHASE"):
+                phase = next(
+                    (item.rsplit(" ", 1)[1] for item in reversed(self.writes)
+                     if item.upper().startswith("PHASE") and "ALIGN" not in item.upper()),
+                    "0",
+                )
+                return phase
+            if upper.startswith("OUTPUT:LOAD"):
+                return "INFINITY"
+            if upper.startswith("OUTPUT"):
+                state = next(
+                    (item.rsplit(" ", 1)[1] for item in reversed(self.writes)
+                     if item.upper().startswith("OUTPUT") and "LOAD" not in item.upper()),
+                    "OFF",
+                )
+                return state
         return "SIN,1000,2,0"
 
 
@@ -45,6 +83,7 @@ def test_output_helper_uses_positional_apply(monkeypatch, capsys):
                      "--amplitude", "2Vpp", "--offset", "0V", "--phase", "30", "--enable"]) == 0
     assert generator.writes == [
         "APPLy:SINusoid:CH2 10kHz,2Vpp,0V",
+        "APPLy:SINusoid:CH2 10kHz,2Vpp,0V",
         "PHASe:CH2 30",
         "PHASe:ALIGN",
         "PHASe:CH2 30",
@@ -52,6 +91,24 @@ def test_output_helper_uses_positional_apply(monkeypatch, capsys):
         "OUTPut:CH2 ON",
     ]
     capsys.readouterr()
+
+
+def test_output_helper_rejects_stale_amplitude_readback(monkeypatch, capsys):
+    class StaleAmplitudeGenerator(FakeGenerator):
+        def query_text(self, command, **kwargs):
+            if command.upper().startswith("VOLTAGE:CH2?"):
+                self.queries.append(command)
+                return "0.1"
+            return super().query_text(command, **kwargs)
+
+    generator = StaleAmplitudeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "2", "--waveform", "sine", "--frequency", "10kHz",
+        "--amplitude", "2Vpp", "--offset", "0V", "--enable",
+    ]) == 1
+    assert "amplitude readback mismatch" in capsys.readouterr().err
 
 
 def test_dc_output_repeats_apply_to_commit_the_physical_level(monkeypatch, capsys):

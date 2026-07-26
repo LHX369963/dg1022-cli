@@ -1,0 +1,446 @@
+{
+  "timestamp": "2026-07-27T00:46:50.527438+08:00",
+  "cycles": [
+    {
+      "cycle": 1,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 2,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 3,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 4,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 5,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 6,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 7,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 8,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 9,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 10,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 11,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 12,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 13,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 14,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 15,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 16,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 17,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 18,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 19,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    },
+    {
+      "cycle": 20,
+      "low": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 0.1,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "OFF"
+      },
+      "high": {
+        "waveform": "CH1:SIN",
+        "frequency_hz": 1000.0,
+        "amplitude": 1.0,
+        "amplitude_unit": "VPP",
+        "offset_v": 0.0,
+        "load": "infinity",
+        "enabled": "ON"
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

@@ -179,6 +179,121 @@ def _parse_number(value: str) -> float | str:
     return number if math.isfinite(number) else normalized.lower()
 
 
+def _parse_quantity(value: str, units: dict[str, float]) -> float:
+    match = re.fullmatch(
+        r"\s*([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*([A-Za-z]*)\s*",
+        value,
+    )
+    if not match:
+        raise ProtocolError(f"cannot verify numeric output value {value!r}")
+    suffix = match.group(2).upper()
+    if suffix not in units:
+        raise ProtocolError(f"cannot verify output unit {suffix!r} in {value!r}")
+    return float(match.group(1)) * units[suffix]
+
+
+def _close_enough(actual: float, expected: float) -> bool:
+    return math.isclose(actual, expected, rel_tol=1e-6, abs_tol=1e-9)
+
+
+def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[str, object]:
+    suffix = "" if args.channel == 1 else ":CH2"
+    waveform_readback = generator.query_text(f"FUNCtion{suffix}?").strip()
+    waveform_normalized = re.sub(
+        r"^CH[12]:\s*", "", waveform_readback, flags=re.IGNORECASE
+    )
+    result: dict[str, object] = {"waveform": waveform_readback}
+    waveform_prefixes = {
+        "sine": ("SIN",),
+        "square": ("SQU",),
+        "ramp": ("RAMP",),
+        "pulse": ("PULS",),
+        "noise": ("NOIS",),
+        # This DG1022 implements APPLY:DC through its arbitrary-function path.
+        "dc": ("DC", "ARB"),
+        "user": ("USER", "ARB"),
+    }[args.waveform]
+    if not waveform_normalized.upper().startswith(waveform_prefixes):
+        raise ProtocolError(
+            f"output waveform readback mismatch: requested {args.waveform}, "
+            f"got {result['waveform']!r}"
+        )
+    if args.frequency is not None:
+        actual = float(_parse_number(generator.query_text(f"FREQuency{suffix}?")))
+        expected = _parse_quantity(
+            args.frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
+        )
+        result["frequency_hz"] = actual
+        if not _close_enough(actual, expected):
+            raise ProtocolError(
+                f"output frequency readback mismatch: requested {expected:g} Hz, got {actual:g} Hz"
+            )
+    if args.amplitude is not None:
+        unit = generator.query_text(f"VOLTage:UNIT{suffix}?").strip().upper()
+        actual = float(_parse_number(generator.query_text(f"VOLTage{suffix}?")))
+        expected = _parse_quantity(
+            args.amplitude,
+            {
+                "": 1.0,
+                unit: 1.0,
+                "VPP": 1.0,
+                "MVPP": 1e-3,
+                "UVPP": 1e-6,
+                "VRMS": 1.0,
+                "MVRMS": 1e-3,
+                "UVRMS": 1e-6,
+                "DBM": 1.0,
+            },
+        )
+        result["amplitude"] = actual
+        result["amplitude_unit"] = unit
+        if not _close_enough(actual, expected):
+            raise ProtocolError(
+                f"output amplitude readback mismatch: requested {expected:g} {unit}, "
+                f"got {actual:g} {unit}"
+            )
+    if args.offset is not None:
+        actual = float(_parse_number(generator.query_text(f"VOLTage:OFFSet{suffix}?")))
+        expected = _parse_quantity(
+            args.offset, {"": 1.0, "V": 1.0, "MV": 1e-3, "UV": 1e-6}
+        )
+        result["offset_v"] = actual
+        if not _close_enough(actual, expected):
+            raise ProtocolError(
+                f"output offset readback mismatch: requested {expected:g} V, got {actual:g} V"
+            )
+    if args.phase is not None:
+        actual = float(_parse_number(generator.query_text(f"PHASe{suffix}?")))
+        expected = _parse_quantity(args.phase, {"": 1.0, "DEG": 1.0})
+        result["phase_deg"] = actual
+        phase_error = (actual - expected + 180.0) % 360.0 - 180.0
+        if not _close_enough(phase_error, 0.0):
+            raise ProtocolError(
+                f"output phase readback mismatch: requested {expected:g} deg, got {actual:g} deg"
+            )
+    if args.load is not None:
+        actual = _parse_number(generator.query_text(f"OUTPut:LOAD{suffix}?"))
+        result["load"] = actual
+        if args.load.strip().upper() in {"INF", "INFINITY"}:
+            matches = actual == "infinity"
+        else:
+            expected = _parse_quantity(args.load, {"": 1.0, "OHM": 1.0})
+            matches = isinstance(actual, float) and _close_enough(actual, expected)
+        if not matches:
+            raise ProtocolError(
+                f"output load readback mismatch: requested {args.load!r}, got {actual!r}"
+            )
+    if args.enable is not None:
+        actual = generator.query_text(f"OUTPut{suffix}?").strip().upper()
+        expected = "ON" if args.enable else "OFF"
+        result["enabled"] = actual
+        if actual != expected:
+            raise ProtocolError(
+                f"output state readback mismatch: requested {expected}, got {actual!r}"
+            )
+    return result
+
+
 def _identity_dict(identity: str, device: str) -> dict[str, str]:
     fields = [field.strip() for field in identity.split(",")]
     version = next((field for field in reversed(fields[3:]) if field), "")
@@ -229,7 +344,7 @@ def _run_batch(generator: LinuxUsbtmc, lines) -> int:
     return 0
 
 
-def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> None:
+def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[str, object]:
     spec = get_command("apply." + args.waveform)
     command = render_command(spec, args.channel)
     suffix = "" if args.channel == 1 else ":CH2"
@@ -242,12 +357,12 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> None:
             raise ProtocolError("APPLy parameters are positional; provide frequency before amplitude/offset")
         command += " " + ",".join(values)
     generator.write(command)
+    # This unit can occasionally acknowledge APPLY while retaining an earlier
+    # parameter when the function/frequency are unchanged. Replay the idempotent
+    # command after settling, then require authoritative register readback.
+    time.sleep(0.5 if args.waveform == "dc" else 0.3)
+    generator.write(command)
     if args.waveform == "dc":
-        # This unit can update the DC registers without committing the physical
-        # level. Repeating the idempotent APPLY after settling commits it without
-        # briefly disabling an already-enabled output.
-        time.sleep(0.5)
-        generator.write(command)
         if args.enable is True or restore_enabled:
             generator.write(f"OUTPut{suffix} OFF")
     if args.phase is not None:
@@ -266,6 +381,7 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> None:
         generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
     elif restore_enabled:
         generator.write(f"OUTPut{suffix} ON")
+    return _output_readback(generator, args)
 
 
 def _configure_mode(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[str, str]:
@@ -530,7 +646,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 except OSError as exc:
                     raise ProtocolError(f"cannot read batch file {args.file}: {exc}") from exc
             if args.command == "output":
-                _configure_output(generator, args)
+                readback = _configure_output(generator, args)
                 print(json.dumps({
                     "channel": args.channel,
                     "waveform": args.waveform,
@@ -540,6 +656,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                     "phase": args.phase,
                     "load": args.load,
                     "enabled": args.enable,
+                    "readback": readback,
                 }))
                 return 0
             if args.command == "modulate":

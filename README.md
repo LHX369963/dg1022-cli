@@ -109,6 +109,14 @@ record, commanded 30 and 90 degree relationships measured approximately 30.6 and
 89.5 degrees. The scope's 600-point `NORMAL` waveform transfers are not reliably
 sample-aligned between channels and must not be used for cross-channel phase work.
 
+The high-level `output` workflow replays its idempotent `APPLy` command after a
+short settling interval and then queries the requested function, frequency,
+amplitude/unit, offset, phase, load, and output state. Its JSON result includes a
+`readback` object. A stale or mismatched register is an error rather than a
+successful-looking response. This guards a DG1022 behavior in which an `APPLy`
+write can occasionally retain an earlier amplitude when the function and
+frequency are unchanged.
+
 ## DG1022 Compatibility Notes
 
 - `/dev/usbtmcN` is dynamically assigned and may change between sessions. Locate
@@ -132,6 +140,9 @@ sample-aligned between channels and must not be used for cross-channel phase wor
 - With 2 Vpp carrier and 50% AM depth, the measured overall envelope was about
   1.50 Vpp. The CLI preserves the requested settings and does not compensate for
   this unit-specific amplitude behavior.
+- `APPLy:DC` is reported by this unit as the `ARB` function. The high-level
+  output verifier accepts `ARB` only for DC/USER requests while still requiring
+  the requested numeric registers and output state to match.
 
 ## Verification
 
@@ -147,7 +158,7 @@ ln -sfn "$(pwd)/skills/dg1022-cli" "${CODEX_HOME:-$HOME/.codex}/skills/dg1022-cl
 python -m pytest
 ```
 
-The current unit suite has 15 tests. Connected acceptance reports are stored in
+The current unit suite has 16 tests. Connected acceptance reports are stored in
 `validation/`; run an individual group with, for example,
 `python tools/live_acceptance.py dg-advanced`.
 

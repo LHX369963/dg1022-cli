@@ -26,6 +26,8 @@ Use high-level `output`, `modulate`, `sweep-config`, `burst-config`, `counter`, 
 Do not call transport classes, open `/dev/usbtmcN` directly, or send SCPI through a Python library when a CLI command exists. Do not implement or invoke firmware update, bootloader, or reflash behavior.
 
 For DC output, use `output --waveform dc` and retain the required frequency/amplitude placeholders described by the CLI. For cross-channel phase, use the high-level `--phase` path so the CLI performs physical phase alignment.
+Treat the `output` result's `readback` object as authoritative. A readback
+mismatch is a failed configuration, not a successful stimulus.
 
 ## Enforce Output Safety
 
