@@ -25,7 +25,9 @@ Use high-level `output`, `modulate`, `sweep-config`, `burst-config`, `counter`, 
 
 Do not call transport classes, open `/dev/usbtmcN` directly, or send SCPI through a Python library when a CLI command exists. Do not implement or invoke firmware update, bootloader, or reflash behavior.
 
-For DC output, use `output --waveform dc` and retain the required frequency/amplitude placeholders described by the CLI. For cross-channel phase, use the high-level `--phase` path so the CLI performs physical phase alignment.
+For DC output, use the natural `output --waveform dc --offset VALUE` form; the CLI supplies
+the positional APPLY placeholders that the instrument ignores. For cross-channel phase, use the
+high-level `--phase` path so the CLI performs physical phase alignment.
 Treat the `output` result's `readback` object as authoritative. A readback
 mismatch is a failed configuration, not a successful stimulus.
 
@@ -51,7 +53,11 @@ Report every CLI error to the user as soon as it occurs, including the failing c
 - If the error blocks the task, diagnose it and attempt a repair immediately so the task can continue.
 - If the error does not block the task, record enough evidence to reproduce it, finish the requested task first, and then diagnose and attempt a repair.
 - After a repair, run focused regression tests plus the repository's required test suite and any safe connected checks needed to establish the fix.
-- When the repair is complete and sufficiently verified, commit only the repair-related changes and push that commit to the current repository remote. Do not include unrelated pre-existing worktree changes.
+- Every completed, sufficiently verified CLI, test, documentation, or Skill change must be
+  committed and pushed to the current branch's configured remote before reporting completion.
+  Do not leave finished work only in the local worktree, and do not include unrelated pre-existing
+  changes. If pushing fails, report the exact failure rather than presenting the change as fully
+  delivered.
 - If the repair is incomplete, cannot be pushed, or lacks sufficient testing, continue any remaining feasible task work and explain the error, attempted repair, remaining risk, and missing validation in detail in the final report.
 
 ## Verify Changes And Claims

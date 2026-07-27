@@ -218,7 +218,10 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
             f"output waveform readback mismatch: requested {args.waveform}, "
             f"got {result['waveform']!r}"
         )
-    if args.frequency is not None:
+    # DG1022 implements APPLY:DC through ARB and ignores the frequency and
+    # amplitude fields required by APPLY's positional syntax.  Do not reject a
+    # valid DC request because those two registers retain their previous values.
+    if args.frequency is not None and args.waveform != "dc":
         actual = float(_parse_number(generator.query_text(f"FREQuency{suffix}?")))
         expected = _parse_quantity(
             args.frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
@@ -228,7 +231,7 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
             raise ProtocolError(
                 f"output frequency readback mismatch: requested {expected:g} Hz, got {actual:g} Hz"
             )
-    if args.amplitude is not None:
+    if args.amplitude is not None and args.waveform != "dc":
         unit = generator.query_text(f"VOLTage:UNIT{suffix}?").strip().upper()
         actual = float(_parse_number(generator.query_text(f"VOLTage{suffix}?")))
         expected = _parse_quantity(
@@ -351,9 +354,17 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
     restore_enabled = False
     if args.waveform == "dc" and args.enable is None:
         restore_enabled = generator.query_text(f"OUTPut{suffix}?").strip().upper() == "ON"
-    values = [value for value in (args.frequency, args.amplitude, args.offset) if value is not None]
+    frequency = args.frequency
+    amplitude = args.amplitude
+    if args.waveform == "dc" and args.offset is not None:
+        # APPLY parameters are positional even though this instrument ignores
+        # the first two for DC.  Supplying harmless placeholders lets the public
+        # helper support the natural "--waveform dc --offset ..." form.
+        frequency = frequency or "1Hz"
+        amplitude = amplitude or "1Vpp"
+    values = [value for value in (frequency, amplitude, args.offset) if value is not None]
     if values:
-        if args.frequency is None or (args.offset is not None and args.amplitude is None):
+        if frequency is None or (args.offset is not None and amplitude is None):
             raise ProtocolError("APPLy parameters are positional; provide frequency before amplitude/offset")
         command += " " + ",".join(values)
     generator.write(command)

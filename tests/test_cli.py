@@ -128,6 +128,39 @@ def test_dc_output_repeats_apply_to_commit_the_physical_level(monkeypatch, capsy
     capsys.readouterr()
 
 
+def test_dc_output_accepts_offset_only_and_ignores_retained_frequency_amplitude(
+        monkeypatch, capsys):
+    class RetainedRegistersGenerator(FakeGenerator):
+        def query_text(self, command, **kwargs):
+            if command.upper().startswith("FREQUENCY"):
+                self.queries.append(command)
+                return "1500"
+            if command.upper().startswith("VOLTAGE") and "OFFSET" not in command.upper():
+                self.queries.append(command)
+                return "5"
+            return super().query_text(command, **kwargs)
+
+    generator = RetainedRegistersGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "2", "--waveform", "dc", "--offset", "1V",
+        "--load", "INF", "--enable",
+    ]) == 0
+    assert generator.writes == [
+        "APPLy:DC:CH2 1Hz,1Vpp,1V",
+        "APPLy:DC:CH2 1Hz,1Vpp,1V",
+        "OUTPut:CH2 OFF",
+        "OUTPut:LOAD:CH2 INF",
+        "OUTPut:CH2 ON",
+    ]
+    assert not any(query.upper().startswith("FREQUENCY") for query in generator.queries)
+    assert not any(
+        query.upper().startswith("VOLTAGE:CH2?") for query in generator.queries
+    )
+    capsys.readouterr()
+
+
 def test_catalog_set_accepts_negative_values_with_unit_suffixes(monkeypatch, capsys):
     generator = FakeGenerator()
     monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
