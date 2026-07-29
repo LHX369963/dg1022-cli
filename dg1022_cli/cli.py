@@ -367,6 +367,12 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
         if frequency is None or (args.offset is not None and amplitude is None):
             raise ProtocolError("APPLy parameters are positional; provide frequency before amplitude/offset")
         command += " " + ",".join(values)
+    # APPLY interprets and stores its amplitude using the currently selected
+    # load.  Set a requested load first; changing INF to 50 ohm after APPLY
+    # makes this DG1022 halve the amplitude register and defeats authoritative
+    # readback of the user's requested loaded amplitude.
+    if args.load is not None:
+        generator.write(f"OUTPut:LOAD{suffix} {args.load}")
     generator.write(command)
     # This unit can occasionally acknowledge APPLY while retaining an earlier
     # parameter when the function/frequency are unchanged. Replay the idempotent
@@ -386,8 +392,6 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
         generator.write(f"PHASe{suffix} {args.phase}")
         time.sleep(0.9)
         generator.write("PHASe:ALIGN")
-    if args.load is not None:
-        generator.write(f"OUTPut:LOAD{suffix} {args.load}")
     if args.enable is not None:
         generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
     elif restore_enabled:

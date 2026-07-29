@@ -49,7 +49,12 @@ class FakeGenerator:
                 )
                 return phase
             if upper.startswith("OUTPUT:LOAD"):
-                return "INFINITY"
+                load = next(
+                    (item.rsplit(" ", 1)[1] for item in reversed(self.writes)
+                     if item.upper().startswith("OUTPUT:LOAD")),
+                    "INFINITY",
+                )
+                return "INFINITY" if load.upper() in {"INF", "INFINITY"} else load
             if upper.startswith("OUTPUT"):
                 state = next(
                     (item.rsplit(" ", 1)[1] for item in reversed(self.writes)
@@ -89,6 +94,23 @@ def test_output_helper_uses_positional_apply(monkeypatch, capsys):
         "PHASe:CH2 30",
         "PHASe:ALIGN",
         "OUTPut:CH2 ON",
+    ]
+    capsys.readouterr()
+
+
+def test_output_helper_sets_load_before_apply(monkeypatch, capsys):
+    generator = FakeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "1", "--waveform", "sine", "--frequency", "100kHz",
+        "--amplitude", "0.1Vpp", "--offset", "0V", "--load", "50", "--enable",
+    ]) == 0
+    assert generator.writes == [
+        "OUTPut:LOAD 50",
+        "APPLy:SINusoid 100kHz,0.1Vpp,0V",
+        "APPLy:SINusoid 100kHz,0.1Vpp,0V",
+        "OUTPut ON",
     ]
     capsys.readouterr()
 
@@ -148,10 +170,10 @@ def test_dc_output_accepts_offset_only_and_ignores_retained_frequency_amplitude(
         "--load", "INF", "--enable",
     ]) == 0
     assert generator.writes == [
+        "OUTPut:LOAD:CH2 INF",
         "APPLy:DC:CH2 1Hz,1Vpp,1V",
         "APPLy:DC:CH2 1Hz,1Vpp,1V",
         "OUTPut:CH2 OFF",
-        "OUTPut:LOAD:CH2 INF",
         "OUTPut:CH2 ON",
     ]
     assert not any(query.upper().startswith("FREQUENCY") for query in generator.queries)
