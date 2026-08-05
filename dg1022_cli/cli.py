@@ -70,7 +70,11 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--timeout-ms", type=int, default=5000, help="USBTMC timeout (default: 5000)")
     parser.add_argument("--query-delay-ms", type=float, default=2.0, help="delay before query reads (default: 2 ms)")
     parser.add_argument("--command-delay-ms", type=float, default=100.0, help="DG1022 processing delay after writes (default: 100 ms)")
-    parser.add_argument("--no-clear", action="store_true", help="do not clear the USBTMC session on open")
+    parser.add_argument(
+        "--clear-on-open", action="store_true",
+        help="explicitly clear the USBTMC session on open",
+    )
+    parser.add_argument("--no-clear", action="store_false", dest="clear_on_open", help=argparse.SUPPRESS)
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("list", help="list attached RIGOL USBTMC devices")
@@ -164,7 +168,7 @@ def _session(args: argparse.Namespace) -> LinuxUsbtmc:
     return LinuxUsbtmc(
         choose_device(args.device, args.serial),
         timeout_ms=args.timeout_ms,
-        clear_on_open=not args.no_clear,
+        clear_on_open=args.clear_on_open,
         query_delay_ms=args.query_delay_ms,
         command_delay_ms=args.command_delay_ms,
     )

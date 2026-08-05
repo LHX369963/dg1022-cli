@@ -52,12 +52,6 @@ itself with `sudo` is neither required nor recommended.
 ## Use
 
 ```bash
-dg1022 list
-dg1022 info
-dg1022 config
-
-dg1022 commands list
-dg1022 commands list --section coupling
 dg1022 commands show frequency.output
 dg1022 get frequency.output --channel 2
 dg1022 set voltage.amplitude 2Vpp --channel 1
@@ -81,6 +75,10 @@ dg1022 raw 'SYSTem:CLKSRC?'
 dg1022 batch commands.scpi
 ```
 
+Use `list`, `info`, `config`, or broad command listings only when discovering a
+device, checking an uncertain identity/configuration, or developing catalog
+coverage. They are not prerequisites for the task commands above.
+
 Use `--device /dev/usbtmcN` or `--serial SERIAL` when explicit selection is
 needed. Unit suffixes accepted by the instrument can be used in high-level values.
 
@@ -89,17 +87,17 @@ reconnection or reboot, and also depends on which other USBTMC instruments are
 attached. For example, the same tested DG1022 has appeared as `/dev/usbtmc3` in
 an earlier validation session and as `/dev/usbtmc2` later; this does not mean the
 instrument went offline. Do not hard-code a previously observed node in scripts.
-Use `dg1022 list`, automatic selection, or the stable `--serial DG1D124605159`
-selector. Confirm actual communication with `dg1022 info`; `lsusb` or the mere
-presence of a device node only confirms USB enumeration.
+Use automatic selection or the stable `--serial DG1D124605159` selector. When
+selection or communication is uncertain, `list` locates candidates and `info`
+queries the authoritative identity; they need not precede known-device work.
 
 Do not identify this generator from the USB product label alone. The tested
 DG1022 (`DG1D124605159`, USB `1ab1:0588`) has reported `DG3000 SERIES` through
 its USB descriptor, while some `lsusb` ID databases label the same VID:PID as
 `DS1000 SERIES`. Both labels are misleading for this unit. Use `dg1022 list` to
 find the `/dev/usbtmcN` node and `dg1022 info` (the instrument's `*IDN?`
-response) to confirm the model. A `DG...` serial number is used for automatic
-generator selection.
+response) to confirm the model only when identity is uncertain. A `DG...`
+serial number is used for automatic generator selection.
 
 When `output --phase` is supplied, the helper sends `PHASe:ALIGN` after writing
 the phase and allowing the unit time to finish waveform reconfiguration. Physical
@@ -119,9 +117,9 @@ frequency are unchanged.
 
 ## DG1022 Compatibility Notes
 
-- `/dev/usbtmcN` is dynamically assigned and may change between sessions. Locate
-  the current node with `dg1022 list`, then verify communication with
-  `dg1022 info`; prefer `--serial` when a stable explicit selector is needed.
+- `/dev/usbtmcN` is dynamically assigned and may change between sessions.
+  Prefer `--serial` when a stable explicit selector is needed; use `list` or
+  `info` only to diagnose selection or identity.
 - USB product strings and host-side `lsusb` names may incorrectly say
   `DG3000 SERIES` or `DS1000 SERIES`; the `*IDN?` model and `DG...` serial are
   authoritative.

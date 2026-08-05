@@ -78,7 +78,7 @@ class LinuxUsbtmc:
         device: DeviceInfo,
         *,
         timeout_ms: int = 5000,
-        clear_on_open: bool = True,
+        clear_on_open: bool = False,
         query_delay_ms: float = 2.0,
         command_delay_ms: float = 100.0,
     ) -> None:

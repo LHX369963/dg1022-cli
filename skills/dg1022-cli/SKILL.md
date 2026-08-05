@@ -7,19 +7,13 @@ description: Operate, test, debug, or document the RIGOL DG1022 function generat
 
 ## Establish Context
 
-Resolve the repository as the directory two levels above this Skill's real path. Read `README.md` before operating the generator and `docs/validation.md` before making coverage claims. For command semantics, inspect `dg1022 commands show NAME`; consult `docs/official/DG1000_ProgrammingGuide_EN.pdf` when the catalog or device behavior is unclear.
+Resolve the repository as the directory two levels above this Skill's real path. Read `README.md`, `docs/validation.md`, or the official programming guide only when the task needs their detail. For unfamiliar command semantics, inspect only the relevant `dg1022 commands show NAME` entry.
 
 The validated instrument is serial `DG1D124605159`. Treat its `*IDN?` response as authoritative. USB product text may incorrectly say DG3000 or DS1000, and `/dev/usbtmcN` changes between connections.
 
 ## Use The Public CLI
 
-Use `dg1022`, preferring the repository's `.venv/bin/dg1022` when present. Select hardware with `--serial DG1D124605159` for connected work. Start with:
-
-```bash
-dg1022 list
-dg1022 --serial DG1D124605159 info
-dg1022 --serial DG1D124605159 config
-```
+Use `dg1022`, preferring the repository's `.venv/bin/dg1022` when present. Select known hardware directly with `--serial DG1D124605159`. Use `list`, `info`, or `config` only when device selection, identity, or configuration is actually unknown or under diagnosis; do not make them routine preflight steps.
 
 Use high-level `output`, `modulate`, `sweep-config`, `burst-config`, `counter`, and `arb` workflows when available. Otherwise use catalog-backed `get`, `set`, and `action`. Use `raw` only when no public typed command exists and after checking the official command catalog.
 
@@ -33,18 +27,16 @@ mismatch is a failed configuration, not a successful stimulus.
 
 ## Enforce Output Safety
 
-Before automated stimulus, confirm identity, both output states, load settings, wiring, and the receiving instrument's safe range. Prefer `INF` load for high-impedance measurement inputs unless the setup explicitly requires termination.
+Before enabling a new stimulus, ensure the requested voltage, offset, load convention, wiring, and receiver limits are safe. Do not add unrelated state queries when those facts are already known. Prefer `INF` load for high-impedance measurement inputs unless the setup explicitly requires termination.
 
-Wrap connected tests in cleanup that always executes these public CLI operations:
+After a task that enabled generator outputs, disable those outputs through the public CLI:
 
 ```bash
 dg1022 --serial DG1D124605159 set output.enabled OFF --channel 1
 dg1022 --serial DG1D124605159 set output.enabled OFF --channel 2
-dg1022 --serial DG1D124605159 set output.load INFinity --channel 1
-dg1022 --serial DG1D124605159 set output.load INFinity --channel 2
 ```
 
-Verify cleanup with `get output.enabled`, `get output.load`, and `get system.error`. Never leave output enabled merely to match a historical validation baseline.
+Do not require the user to save or restore unrelated generator state, and do not add routine post-cleanup queries. Never leave an output enabled merely to match a historical validation baseline.
 
 ## Handle CLI Failures Without Losing The Task
 

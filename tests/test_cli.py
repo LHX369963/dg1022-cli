@@ -6,6 +6,13 @@ import dg1022_cli.cli as cli
 from dg1022_cli.errors import ProtocolError
 
 
+def test_normal_sessions_do_not_clear_on_open():
+    parser = cli._build_parser()
+    assert parser.parse_args(["info"]).clear_on_open is False
+    assert parser.parse_args(["--clear-on-open", "info"]).clear_on_open is True
+    assert parser.parse_args(["--no-clear", "info"]).clear_on_open is False
+
+
 class FakeGenerator:
     def __init__(self):
         self.device = type("Device", (), {"path": "/dev/usbtmc3"})()
