@@ -31,33 +31,38 @@ def _read_text(path: Path) -> str:
         return ""
 
 
+def _device_info(node: Path) -> DeviceInfo | None:
+    try:
+        usb_device = (Path("/sys/class/usbmisc") / node.name / "device").resolve().parent
+    except OSError:
+        return None
+    vendor_id = _read_text(usb_device / "idVendor").lower()
+    manufacturer = _read_text(usb_device / "manufacturer")
+    if vendor_id != "1ab1" and "rigol" not in manufacturer.lower():
+        return None
+    return DeviceInfo(
+        path=node, manufacturer=manufacturer,
+        product=_read_text(usb_device / "product"),
+        serial=_read_text(usb_device / "serial"), vendor_id=vendor_id,
+        product_id=_read_text(usb_device / "idProduct").lower(),
+    )
+
+
 def discover_devices() -> list[DeviceInfo]:
-    devices: list[DeviceInfo] = []
-    for node in sorted(Path("/dev").glob("usbtmc*")):
-        try:
-            usb_device = (Path("/sys/class/usbmisc") / node.name / "device").resolve().parent
-        except OSError:
-            continue
-        vendor_id = _read_text(usb_device / "idVendor").lower()
-        manufacturer = _read_text(usb_device / "manufacturer")
-        if vendor_id != "1ab1" and "rigol" not in manufacturer.lower():
-            continue
-        devices.append(DeviceInfo(
-            path=node,
-            manufacturer=manufacturer,
-            product=_read_text(usb_device / "product"),
-            serial=_read_text(usb_device / "serial"),
-            vendor_id=vendor_id,
-            product_id=_read_text(usb_device / "idProduct").lower(),
-        ))
-    return devices
+    return [item for node in sorted(Path("/dev").glob("usbtmc*"))
+            if (item := _device_info(node)) is not None]
 
 
 def choose_device(path: str | None = None, serial: str | None = None) -> DeviceInfo:
-    devices = discover_devices()
     if path is not None:
-        matches = [item for item in devices if item.path == Path(path)]
-    elif serial is not None:
+        requested = Path(path)
+        node = requested.resolve() if requested.is_symlink() else requested
+        item = _device_info(node)
+        if item is None:
+            raise TransportError(f"no RIGOL DG USBTMC device found at {path}")
+        return item
+    devices = discover_devices()
+    if serial is not None:
         matches = [item for item in devices if item.serial == serial]
     else:
         matches = [item for item in devices if item.serial.upper().startswith("DG")]
