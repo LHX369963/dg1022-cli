@@ -9,7 +9,6 @@ from pathlib import Path
 
 from .errors import TransportError
 
-
 USBTMC_IOCTL_CLEAR = 0x5B02
 USBTMC_IOCTL_SET_TIMEOUT = 0x40045B0A
 
@@ -100,7 +99,7 @@ class LinuxUsbtmc:
         self.command_delay_ms = command_delay_ms
         self._fd: int | None = None
 
-    def __enter__(self) -> "LinuxUsbtmc":
+    def __enter__(self) -> "LinuxUsbtmc":  # noqa: UP037
         try:
             self._fd = os.open(self.device.path, os.O_RDWR)
             fcntl.flock(self._fd, fcntl.LOCK_EX)

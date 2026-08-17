@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import math
 import re
@@ -10,22 +11,22 @@ import subprocess
 import sys
 import tempfile
 import time
+from collections.abc import Callable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Callable
-
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DS_ROOT = ROOT.parent / "ds1152e"
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(DS_ROOT))
 
-from dg1022_cli.transport import LinuxUsbtmc as Generator  # noqa: E402
-from dg1022_cli.transport import choose_device as choose_generator  # noqa: E402
 from rigol_cli.transport import LinuxUsbtmc as Scope  # noqa: E402
 from rigol_cli.transport import choose_device as choose_scope  # noqa: E402
 from rigol_cli.waveform import parse_ieee_block  # noqa: E402
 
+from dg1022_cli.transport import LinuxUsbtmc as Generator  # noqa: E402
+from dg1022_cli.transport import choose_device as choose_generator  # noqa: E402
 
 FREQUENCIES = (100.0, 1_000.0, 10_000.0, 100_000.0)
 AMPLITUDES = (0.5, 1.0, 2.0, 4.0)
@@ -228,7 +229,7 @@ def _crossing_frequencies(samples: list[float], sample_rate: float) -> list[floa
         if samples[index - 1] < midpoint <= samples[index]:
             crossings.append(float(index))
     dt = 1.0 / sample_rate
-    return [1.0 / ((right - left) * dt) for left, right in zip(crossings, crossings[1:]) if right > left]
+    return [1.0 / ((right - left) * dt) for left, right in itertools.pairwise(crossings) if right > left]
 
 
 def _fundamental_phase(samples: list[float], frequency: float, sample_rate: float) -> float:
@@ -1346,7 +1347,7 @@ GROUPS = {
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Connected DG1022/DS1152E functional acceptance")
-    parser.add_argument("group", choices=tuple(GROUPS) + ("all",))
+    parser.add_argument("group", choices=(*tuple(GROUPS), "all"))
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     started = time.time()

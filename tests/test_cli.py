@@ -334,7 +334,7 @@ def test_sample_validation(tmp_path):
     path.write_text("-1, 0, 1")
     assert cli._load_samples(path, False) == ["-1.0", "0.0", "1.0"]
     path.write_text("-1, 20000")
-    with pytest.raises(ProtocolError, match="outside 0..16383"):
+    with pytest.raises(ProtocolError, match=r"outside 0\.\.16383"):
         cli._load_samples(path, True)
 
 

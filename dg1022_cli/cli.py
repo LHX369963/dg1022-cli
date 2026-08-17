@@ -8,13 +8,12 @@ import re
 import struct
 import sys
 import time
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 from .catalog import COMMANDS, CommandSpec, get_command, render_command
 from .errors import Dg1022Error, ProtocolError, TransportError
 from .transport import LinuxUsbtmc, choose_device, discover_devices
-
 
 SNAPSHOT_COMMANDS = {
     "channel1_function": "FUNCtion?",
@@ -378,7 +377,7 @@ def _settle_after_write(command: str) -> None:
 
 
 def _run_batch(generator: LinuxUsbtmc, lines) -> int:
-    for line_number, raw_line in enumerate(lines, start=1):
+    for _line_number, raw_line in enumerate(lines, start=1):
         command = raw_line.strip()
         if not command or command.startswith("#"):
             continue
@@ -421,9 +420,8 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
     # command after settling, then require authoritative register readback.
     time.sleep(0.5 if args.waveform == "dc" else 0.3)
     generator.write(command)
-    if args.waveform == "dc":
-        if args.enable is True or restore_enabled:
-            generator.write(f"OUTPut{suffix} OFF")
+    if args.waveform == "dc" and (args.enable is True or restore_enabled):
+        generator.write(f"OUTPut{suffix} OFF")
     if args.phase is not None:
         generator.write(f"PHASe{suffix} {args.phase}")
         # APPLY and phase register changes need about one second before ALIGN
