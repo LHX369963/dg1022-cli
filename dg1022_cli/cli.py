@@ -115,6 +115,17 @@ def _build_parser() -> argparse.ArgumentParser:
     output.add_argument("--load", help="load in ohms or INF")
     output.add_argument("--enable", action=argparse.BooleanOptionalAction, default=None)
 
+    differential = sub.add_parser("differential", help="configure CH1/CH2 as one differential source")
+    differential.add_argument("--waveform", choices=("sine", "square", "ramp", "pulse", "noise", "dc", "user"), required=True)
+    differential.add_argument("--frequency")
+    differential.add_argument("--amplitude")
+    differential.add_argument("--offset1", default="0V")
+    differential.add_argument("--offset2", default="0V")
+    differential.add_argument("--phase", default="180", help="CH2 minus CH1 phase in degrees")
+    differential.add_argument("--duty")
+    differential.add_argument("--load", default="INF")
+    differential.add_argument("--enable", action=argparse.BooleanOptionalAction, default=True)
+
     modulate = sub.add_parser("modulate", help="configure AM, FM, PM, or FSK on CH1")
     modulate.add_argument("mode", choices=("am", "fm", "pm", "fsk"))
     modulate.add_argument("--source", choices=("INT", "EXT"), default="INT")
@@ -436,9 +447,30 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
         generator.write(f"{duty_command} {duty:.12g}")
     if args.enable is not None:
         generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
+        if args.waveform == "dc":
+            time.sleep(0.3)
+            generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
     elif restore_enabled:
         generator.write(f"OUTPut{suffix} ON")
     return _output_readback(generator, args)
+
+
+def _configure_differential(generator: LinuxUsbtmc, args: argparse.Namespace) -> None:
+    for channel, offset, phase in (
+        (1, args.offset1, "0"),
+        (2, args.offset2, args.phase),
+    ):
+        _configure_output(generator, argparse.Namespace(
+            channel=channel,
+            waveform=args.waveform,
+            frequency=args.frequency,
+            amplitude=args.amplitude,
+            offset=offset,
+            phase=None if args.waveform == "dc" else phase,
+            duty=args.duty,
+            load=args.load,
+            enable=args.enable,
+        ))
 
 
 def _configure_mode(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[str, str]:
@@ -702,6 +734,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                     raise ProtocolError(f"cannot read batch file {args.file}: {exc}") from exc
             if args.command == "output":
                 _configure_output(generator, args)
+                return 0
+            if args.command == "differential":
+                _configure_differential(generator, args)
                 return 0
             if args.command == "modulate":
                 _configure_mode(generator, args)

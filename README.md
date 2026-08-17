@@ -22,10 +22,10 @@ Reconnect once after installing the rule. Normal use does not need `sudo`.
 ## Quick use
 
 ```bash
-dg1022 --serial DG1D124605159 output --channel 1 --waveform sine \
+dg1022 output --channel 1 --waveform sine \
   --frequency 1kHz --amplitude 2Vpp --offset 0V --enable
 # Stop the output created by this task when finished.
-dg1022 --serial DG1D124605159 set output.enabled OFF --channel 1
+dg1022 set output.enabled OFF --channel 1
 ```
 
 A known `--serial` or `--device /dev/usbtmcN` is used directly; do not run

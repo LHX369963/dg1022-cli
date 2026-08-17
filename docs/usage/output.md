@@ -7,12 +7,15 @@ frequency/amplitude/offset combinations.
 ```bash
 dg1022 output --channel 1 --waveform sine --frequency 1kHz --amplitude 2Vpp --enable
 dg1022 output --channel 2 --waveform square --frequency 5kHz --amplitude 2Vpp --duty 30 --enable
+dg1022 differential --waveform dc --offset1 0V --offset2 1V --load INF --enable
 ```
 
 Apply the requested state directly. Do not add preflight, state snapshots,
 automatic shutdown, restoration, or post-checks unless explicitly requested.
 Successful control is silent and exits zero. Square duty is normalized to
 20–80%; pulse duty is normalized to 0.001–99.999% inside the CLI.
+`differential` configures both channels through one USBTMC session; for periodic
+waveforms `--phase` is CH2 relative to CH1, while DC uses independent offsets.
 
 For typed SCPI, inspect the needed entry then use `get`, `set`, or `action`:
 

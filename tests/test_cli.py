@@ -193,6 +193,7 @@ def test_dc_output_repeats_apply_to_commit_the_physical_level(monkeypatch, capsy
         "APPLy:DC 1kHz,1Vpp,-0.5V",
         "OUTPut OFF",
         "OUTPut ON",
+        "OUTPut ON",
     ]
     capsys.readouterr()
 
@@ -222,12 +223,28 @@ def test_dc_output_accepts_offset_only_and_ignores_retained_frequency_amplitude(
         "APPLy:DC:CH2 1Hz,1Vpp,1V",
         "OUTPut:CH2 OFF",
         "OUTPut:CH2 ON",
+        "OUTPut:CH2 ON",
     ]
     assert not any(query.upper().startswith("FREQUENCY") for query in generator.queries)
     assert not any(
         query.upper().startswith("VOLTAGE:CH2?") for query in generator.queries
     )
     capsys.readouterr()
+
+
+def test_differential_dc_configures_both_channels_in_one_session(monkeypatch, capsys):
+    generator = FakeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "differential", "--waveform", "dc", "--offset1", "0V", "--offset2", "1V",
+        "--load", "INF", "--enable",
+    ]) == 0
+    assert "APPLy:DC 1Hz,1Vpp,0V" in generator.writes
+    assert "APPLy:DC:CH2 1Hz,1Vpp,1V" in generator.writes
+    assert generator.writes.count("OUTPut ON") == 2
+    assert generator.writes.count("OUTPut:CH2 ON") == 2
+    assert capsys.readouterr().out == ""
 
 
 def test_catalog_set_accepts_negative_values_with_unit_suffixes(monkeypatch, capsys):
