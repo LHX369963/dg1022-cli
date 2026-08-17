@@ -3,6 +3,7 @@ from contextlib import contextmanager
 import pytest
 
 import dg1022_cli.cli as cli
+import dg1022_cli.output as output
 from dg1022_cli.errors import ProtocolError
 
 
@@ -39,7 +40,7 @@ class FakeGenerator:
                 channel = "CH2" if ":CH2" in head.upper() else "CH1"
                 return f"{channel}:{'ARB' if waveform.upper() == 'DC' else waveform}"
             if upper.startswith("FREQUENCY"):
-                return str(cli._parse_quantity(
+                return str(output._parse_quantity(
                     frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
                 ))
             if upper.startswith("VOLTAGE:UNIT"):
