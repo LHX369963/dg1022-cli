@@ -1,6 +1,6 @@
 ---
 name: dg1022-cli
-description: Control the connected RIGOL DG1022 with the dg1022 CLI.
+description: Control RIGOL DG1022 generators with the dg1022 CLI.
 ---
 
 # DG1022 CLI
