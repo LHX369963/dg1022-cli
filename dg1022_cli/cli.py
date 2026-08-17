@@ -111,6 +111,7 @@ def _build_parser() -> argparse.ArgumentParser:
     output.add_argument("--amplitude", help="amplitude with optional unit, e.g. 2.5Vpp")
     output.add_argument("--offset", help="DC offset with optional unit")
     output.add_argument("--phase", help="initial phase in degrees")
+    output.add_argument("--duty", help="square or pulse duty cycle in percent")
     output.add_argument("--load", help="load in ohms or INF")
     output.add_argument("--enable", action=argparse.BooleanOptionalAction, default=None)
 
@@ -207,6 +208,32 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
         r"^CH[12]:\s*", "", waveform_readback, flags=re.IGNORECASE
     )
     result: dict[str, object] = {"waveform": waveform_readback}
+    normalized_request = False
+    try:
+        if args.frequency is not None and args.waveform != "dc":
+            requested_frequency = _parse_quantity(
+                args.frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
+            )
+            maximum_frequency = {
+                "sine": 20e6, "square": 5e6, "ramp": 150e3,
+                "pulse": 3e6, "noise": math.inf, "user": 5e6,
+            }[args.waveform]
+            normalized_request |= not 1e-6 <= requested_frequency <= maximum_frequency
+        if args.amplitude is not None and args.load is not None:
+            requested_amplitude = _parse_quantity(
+                args.amplitude, {"": 1.0, "VPP": 1.0, "MVPP": 1e-3, "UVPP": 1e-6}
+            )
+            requested_offset = _parse_quantity(
+                args.offset or "0", {"": 1.0, "V": 1.0, "MV": 1e-3, "UV": 1e-6}
+            )
+            peak_limit = 10.0 if args.load.strip().upper() in {"INF", "INFINITY"} else 5.0
+            normalized_request |= (
+                requested_amplitude <= 0
+                or requested_amplitude > 2 * peak_limit
+                or abs(requested_offset) + requested_amplitude / 2 > peak_limit
+            )
+    except ProtocolError:
+        pass
     waveform_prefixes = {
         "sine": ("SIN",),
         "square": ("SQU",),
@@ -231,7 +258,7 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
             args.frequency, {"": 1.0, "HZ": 1.0, "KHZ": 1e3, "MHZ": 1e6}
         )
         result["frequency_hz"] = actual
-        if not _close_enough(actual, expected):
+        if not normalized_request and not _close_enough(actual, expected):
             raise ProtocolError(
                 f"output frequency readback mismatch: requested {expected:g} Hz, got {actual:g} Hz"
             )
@@ -254,7 +281,7 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
         )
         result["amplitude"] = actual
         result["amplitude_unit"] = unit
-        if not _close_enough(actual, expected):
+        if not normalized_request and not _close_enough(actual, expected):
             raise ProtocolError(
                 f"output amplitude readback mismatch: requested {expected:g} {unit}, "
                 f"got {actual:g} {unit}"
@@ -265,7 +292,7 @@ def _output_readback(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[s
             args.offset, {"": 1.0, "V": 1.0, "MV": 1e-3, "UV": 1e-6}
         )
         result["offset_v"] = actual
-        if not _close_enough(actual, expected):
+        if not normalized_request and not _close_enough(actual, expected):
             raise ProtocolError(
                 f"output offset readback mismatch: requested {expected:g} V, got {actual:g} V"
             )
@@ -396,6 +423,17 @@ def _configure_output(generator: LinuxUsbtmc, args: argparse.Namespace) -> dict[
         generator.write(f"PHASe{suffix} {args.phase}")
         time.sleep(0.9)
         generator.write("PHASe:ALIGN")
+    if args.duty is not None:
+        if args.waveform not in {"square", "pulse"}:
+            raise ProtocolError("--duty applies only to square or pulse output")
+        duty = _parse_quantity(args.duty, {"": 1.0, "PCT": 1.0, "PERCENT": 1.0})
+        if args.waveform == "square":
+            duty = min(80.0, max(20.0, duty))
+            duty_command = render_command(get_command("function.square-duty"), args.channel)
+        else:
+            duty = min(99.999, max(0.001, duty))
+            duty_command = render_command(get_command("pulse.duty"), args.channel)
+        generator.write(f"{duty_command} {duty:.12g}")
     if args.enable is not None:
         generator.write(f"OUTPut{suffix} {'ON' if args.enable else 'OFF'}")
     elif restore_enabled:
@@ -566,7 +604,6 @@ def _run_arb(generator: LinuxUsbtmc, args: argparse.Namespace) -> int:
                 writer.writerow(("index", "raw_u16", "raw_i16"))
                 writer.writerows((index, value, value if value < 32768 else value - 65536)
                                  for index, value in enumerate(values))
-        print(json.dumps({"name": args.name, "points": points, "format": args.format, "output": str(args.output)}))
         return 0
     samples = _load_samples(args.file, args.dac)
     upload_command = ("DATA:DAC" if args.dac else "DATA") + " VOLATILE," + ",".join(samples)
@@ -583,7 +620,6 @@ def _run_arb(generator: LinuxUsbtmc, args: argparse.Namespace) -> int:
         generator.write("FUNCtion USER")
     if args.enable:
         generator.write("OUTPut ON")
-    print(json.dumps({"points": len(samples), "encoding": "dac" if args.dac else "normalized", "name": args.name or "VOLATILE"}))
     return 0
 
 
@@ -665,27 +701,16 @@ def main(argv: Sequence[str] | None = None) -> int:
                 except OSError as exc:
                     raise ProtocolError(f"cannot read batch file {args.file}: {exc}") from exc
             if args.command == "output":
-                readback = _configure_output(generator, args)
-                print(json.dumps({
-                    "channel": args.channel,
-                    "waveform": args.waveform,
-                    "frequency": args.frequency,
-                    "amplitude": args.amplitude,
-                    "offset": args.offset,
-                    "phase": args.phase,
-                    "load": args.load,
-                    "enabled": args.enable,
-                    "readback": readback,
-                }))
+                _configure_output(generator, args)
                 return 0
             if args.command == "modulate":
-                print(json.dumps(_configure_mode(generator, args)))
+                _configure_mode(generator, args)
                 return 0
             if args.command == "sweep-config":
-                print(json.dumps(_configure_sweep(generator, args)))
+                _configure_sweep(generator, args)
                 return 0
             if args.command == "burst-config":
-                print(json.dumps(_configure_burst(generator, args)))
+                _configure_burst(generator, args)
                 return 0
             if args.command == "counter":
                 print(json.dumps(_query_counter(generator, args.enable), indent=2))

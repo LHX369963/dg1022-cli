@@ -122,6 +122,18 @@ def test_output_helper_sets_load_before_apply(monkeypatch, capsys):
     capsys.readouterr()
 
 
+def test_output_helper_sets_square_duty_without_catalog_lookup(monkeypatch, capsys):
+    generator = FakeGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "2", "--waveform", "square", "--frequency", "5kHz",
+        "--amplitude", "2Vpp", "--offset=-0.3V", "--duty", "30", "--enable",
+    ]) == 0
+    assert "FUNCtion:SQUare:DCYCle:CH2 30" in generator.writes
+    assert capsys.readouterr().out == ""
+
+
 def test_output_helper_rejects_stale_amplitude_readback(monkeypatch, capsys):
     class StaleAmplitudeGenerator(FakeGenerator):
         def query_text(self, command, **kwargs):
@@ -138,6 +150,34 @@ def test_output_helper_rejects_stale_amplitude_readback(monkeypatch, capsys):
         "--amplitude", "2Vpp", "--offset", "0V", "--enable",
     ]) == 1
     assert "amplitude readback mismatch" in capsys.readouterr().err
+
+
+def test_output_helper_accepts_instrument_normalization_for_wild_request(monkeypatch, capsys):
+    class NormalizingGenerator(FakeGenerator):
+        def query_text(self, command, **kwargs):
+            upper = command.upper()
+            if upper.startswith("FREQUENCY"):
+                self.queries.append(command)
+                return "2e7"
+            if upper.startswith("VOLTAGE:UNIT"):
+                self.queries.append(command)
+                return "VPP"
+            if upper.startswith("VOLTAGE:OFFSET"):
+                self.queries.append(command)
+                return "0.2"
+            if upper.startswith("VOLTAGE"):
+                self.queries.append(command)
+                return "19.6"
+            return super().query_text(command, **kwargs)
+
+    generator = NormalizingGenerator()
+    monkeypatch.setattr(cli, "_session", lambda args: fake_session(generator))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    assert cli.main([
+        "output", "--channel", "1", "--waveform", "sine", "--frequency", "50MHz",
+        "--amplitude", "30Vpp", "--offset", "8V", "--load", "INF", "--enable",
+    ]) == 0
+    assert capsys.readouterr().out == ""
 
 
 def test_dc_output_repeats_apply_to_commit_the_physical_level(monkeypatch, capsys):

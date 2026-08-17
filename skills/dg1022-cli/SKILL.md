@@ -1,34 +1,26 @@
 ---
 name: dg1022-cli
-description: Operate, test, debug, or document the RIGOL DG1022 function generator through the public dg1022 CLI, including output, catalog get/set/action, modulation, sweep, burst, counter, arbitrary waveforms, and connected validation. Use for DG1022 hardware work, dg1022 command changes, waveform generation, cross-instrument tests, or deployment; restrict conclusions to DG1022 and exclude firmware updates.
+description: Control the connected RIGOL DG1022 with the dg1022 CLI.
 ---
 
 # DG1022 CLI
 
-Resolve the repository two levels above this file's real path. Use its
-`.venv/bin/dg1022` when present, otherwise `dg1022`; use only the public CLI.
-The supported unit is DG1022, validated as `DG1D124605159`; do not infer other
-models or modify firmware.
+Use `dg1022/.venv/bin/dg1022 --serial DG1D124605159` from the instrument-cli
+workspace. Execute the requested operation
+directly; do not inspect, preserve, restore, or clean up unrelated state.
 
-Select known hardware with `--serial DG1D124605159` (preferred) or a known
-`--device`; do not scan first. Use `list`, `info`, or `config` only when
-selection, identity, or configuration is genuinely unknown. Do not open USBTMC
-or send Python-library SCPI when a CLI command exists.
+Common forms:
 
-Use high-level `output`, `modulate`, `sweep-config`, `burst-config`, `counter`,
-and `arb` first; use typed `get`/`set`/`action` next and `raw` only as a last
-resort. Read [output](../../docs/usage/output.md),
-[modes](../../docs/usage/modes.md), or
-[arbitrary waveforms](../../docs/usage/arbitrary.md) only for that operation;
-inspect a catalog entry only when its semantics are unfamiliar.
+```bash
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 output --channel 1 --waveform sine --frequency 1kHz --amplitude 1Vpp --offset 0V --load INF --enable
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 output --channel 2 --waveform square --frequency 5kHz --amplitude 2Vpp --offset=-0.3V --duty 30 --load INF --enable
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 modulate fm --source INT --internal-waveform SIN --internal-frequency 1kHz --deviation 10kHz --enable
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 sweep-config --start 1kHz --stop 10kHz --time 1s --spacing LIN --enable
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 burst-config --mode TRIG --cycles 10 --period 20ms --trigger-source IMM --enable
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 get frequency.output --channel 1
+dg1022/.venv/bin/dg1022 --serial DG1D124605159 set voltage.amplitude 2Vpp --channel 1
+```
 
-Before enabling output, verify requested voltage, offset, load, wiring, and
-receiver limits. Prefer `INF` for high-impedance inputs. Stop only outputs
-started by the task; do not require state snapshots, restoration, or routine
-post-checks. A high-level output `readback` mismatch is failure.
-
-Normal transport does not CLEAR. On failure, report the command and impact,
-then diagnose without abandoning the requested task. For code or connected
-validation work, read [development](../../docs/usage/development.md);
-acceptance is not daily-use preflight. Run the test suite after code changes and
-keep evidence distinct from claims of physical accuracy.
+Prefer `output`, `modulate`, `sweep-config`, `burst-config`, `counter`, and
+`arb`; use typed `get`/`set`/`action` next. Use `commands show <name>` only for
+an unfamiliar typed command and `raw` only when no maintained command exists.

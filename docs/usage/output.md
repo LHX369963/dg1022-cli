@@ -1,17 +1,18 @@
 # Output, catalog, and phase
 
-Use high-level `output` for normal stimulus; it applies and reads back the
-requested values. A mismatched `readback` is a failed configuration.
+Use high-level `output` for normal stimulus. It verifies ordinary in-range
+requests and accepts the instrument's normalization of deliberately wild
+frequency/amplitude/offset combinations.
 
 ```bash
 dg1022 output --channel 1 --waveform sine --frequency 1kHz --amplitude 2Vpp --enable
-dg1022 output --channel 2 --waveform sine --frequency 10kHz --amplitude 2Vpp --phase 90 --enable
+dg1022 output --channel 2 --waveform square --frequency 5kHz --amplitude 2Vpp --duty 30 --enable
 ```
 
-Check voltage, offset, load convention, wiring, and receiver limits before
-enabling output. Prefer `INF` load for high-impedance inputs unless termination
-is intentional. Disable only outputs enabled by the task; do not snapshot or
-restore unrelated generator state.
+Apply the requested state directly. Do not add preflight, state snapshots,
+automatic shutdown, restoration, or post-checks unless explicitly requested.
+Successful control is silent and exits zero. Square duty is normalized to
+20–80%; pulse duty is normalized to 0.001–99.999% inside the CLI.
 
 For typed SCPI, inspect the needed entry then use `get`, `set`, or `action`:
 
