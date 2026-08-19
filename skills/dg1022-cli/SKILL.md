@@ -8,6 +8,8 @@ description: Control RIGOL DG1022 generators with the dg1022 CLI.
 Use `dg1022/.venv/bin/dg1022` from the instrument-cli
 workspace. Execute the requested operation
 directly; do not inspect, preserve, restore, or clean up unrelated state.
+Do not scan processes or query preliminary state. Omit device selectors unless
+the CLI reports ambiguity.
 
 Common forms:
 
